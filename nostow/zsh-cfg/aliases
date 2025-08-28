@@ -41,7 +41,7 @@ alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
 # Edit config
-alias cfgzshell='nvim ~/.config/dotfiles/zsh'
+alias cfgzshell='nvim ~/dotfiles/nostow/zsh-cfg/'
 alias cfghypr='nvim ~/.config/hypr'
-alias sourcecfg='source ~/.zshrc'
-alias dotfiles='cd ~/.config/dotfiles'
+alias scfg='source ~/.zshrc'
+alias dotfiles='cd ~/dotfiles'
