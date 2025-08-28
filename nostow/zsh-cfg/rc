@@ -1,0 +1,8 @@
+source ~/dotfiles/nostow/zsh-cfg/shell
+source ~/dotfiles/nostow/zsh-cfg/aliases
+source ~/dotfiles/nostow/zsh-cfg/functions
+source ~/dotfiles/nostow/zsh-cfg/prompt
+source ~/dotfiles/nostow/zsh-cfg/init
+source ~/dotfiles/nostow/zsh-cfg/envs
+[[ -n $ZSH_VERSION && $- == *i* ]] && source ~/dotfiles/nostow/zsh-cfg/inputrc
+

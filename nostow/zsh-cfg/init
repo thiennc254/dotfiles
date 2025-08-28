@@ -1,0 +1,29 @@
+
+# mise
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
+# zoxide
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+# fzf
+if command -v fzf &> /dev/null; then
+  if [[ -f /usr/share/fzf/completion.zsh ]]; then
+    source /usr/share/fzf/completion.zsh
+  fi
+  if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+    source /usr/share/fzf/key-bindings.zsh
+  fi
+fi
+
+# Auto join Tmux Workspace
+if [[ -z "$TMUX" ]]; then
+  if tmux has-session -t workspace 2>/dev/null; then
+    tmux attach-session -t workspace
+  else
+    tmux new-session -s workspace
+  fi
+fi

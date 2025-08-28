@@ -1,0 +1,11 @@
+# History control
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1100000000
+SAVEHIST=1000000000
+
+setopt appendhistory
+
+
+# Set complete path
+export PATH="./bin:$HOME/.local/bin:$PATH"
+set +h

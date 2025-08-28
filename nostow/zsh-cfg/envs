@@ -1,0 +1,7 @@
+# Editor used by CLI
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
+
+export GPG_TTY=$(tty)
+export XDG_CONFIG_HOME="$HOME/.config"
