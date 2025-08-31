@@ -15,3 +15,6 @@ keymap.set("n", "<leader>h", ":nohlsearch<CR>", opts)
 
 -- [Command mode]
 keymap.set("n", ";", ":")
+
+-- Open File Explorer - Snack
+-- ~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras/editor/snacks_explorer.lua
