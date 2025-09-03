@@ -15,16 +15,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Snack Explorer/Picker transparent background
 -- vim.api.nvim_create_autocmd("User", {
+--     pattern = "*",
 --     callback = function()
---         vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "NONE" })
---         vim.api.nvim_set_hl(0, "SnacksExplorer", { bg = "NONE" })
+--         vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
+--         vim.api.nvim_set_hl(0, "SnacksPickerBorder", { bg = "none", nocombine = true })
+--         -- vim.api.nvim_set_hl(0, "SnacksPickerBorder", { fg = "#316c71", bg = "none", nocombine = true })
 --     end,
 -- })
-vim.api.nvim_create_autocmd("User", {
-    pattern = "*",
-    callback = function()
-        vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
-        vim.api.nvim_set_hl(0, "SnacksExplorer", { bg = "NONE" })
-        vim.api.nvim_set_hl(0, "SnacksPickerBorder", { fg = "#316c71", bg = "none", nocombine = true })
-    end,
-})
