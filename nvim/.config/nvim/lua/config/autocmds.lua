@@ -13,12 +13,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- Snack Explorer/Picker transparent background
--- vim.api.nvim_create_autocmd("User", {
---     pattern = "*",
---     callback = function()
---         vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
---         vim.api.nvim_set_hl(0, "SnacksPickerBorder", { bg = "none", nocombine = true })
---         -- vim.api.nvim_set_hl(0, "SnacksPickerBorder", { fg = "#316c71", bg = "none", nocombine = true })
---     end,
--- })
+-- fix bufferline not transparent
+-- ~/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/groups/base.lua
+-- TabLineFill                 = { bg = opts.transparent and c.none or c.black },
+-- tab pages line, where there are no labels
