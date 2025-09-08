@@ -1,3 +1,8 @@
+-- fix bufferline not transparent
+-- ~/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/groups/base.lua
+-- TabLineFill                 = { bg = opts.transparent and c.none or c.black },
+-- tab pages line, where there are no labels
+
 return {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
@@ -6,6 +11,7 @@ return {
         options = {
             mode = "buffers",
             diagnostics = "nvim_lsp",
+            -- separator_style = "slant",
         },
     },
 }

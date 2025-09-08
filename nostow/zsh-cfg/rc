@@ -6,11 +6,5 @@ source ~/dotfiles/nostow/zsh-cfg/prompt
 source ~/dotfiles/nostow/zsh-cfg/init
 source ~/dotfiles/nostow/zsh-cfg/envs
 
-# Plugins
-source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 [[ -n $ZSH_VERSION && $- == *i* ]] && source ~/dotfiles/nostow/zsh-cfg/inputrc
 

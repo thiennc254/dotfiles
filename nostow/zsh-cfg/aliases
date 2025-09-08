@@ -1,6 +1,6 @@
 # File system
 alias ls='eza -lh --group-directories-first --icons=auto'
-alias lsa='ls -a'
+alias lsa='eza -lah --group-directories-first --icons=auto'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
@@ -41,7 +41,7 @@ alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
 # Edit config
-alias cfgs='nvim ~/dotfiles/nostow/zsh-cfg/'
+alias cfgs='nvim ~/dotfiles/zsh/.zshrc'
 alias cfghypr='nvim ~/.config/hypr'
 alias scfg='source ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
