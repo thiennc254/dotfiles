@@ -1,43 +1,36 @@
-# Dotfiles
+# 🛠️ Dotfiles
 
-```sh
- ██████   █████   █████████  ███████████
-░░██████ ░░███   ███░░░░░███░█░░░███░░░█
- ░███░███ ░███  ███     ░░░ ░   ░███  ░ 
- ░███░░███░███ ░███             ░███    
- ░███ ░░██████ ░███             ░███    
- ░███  ░░█████ ░░███     ███    ░███    
- █████  ░░█████ ░░█████████     █████   
-░░░░░    ░░░░░   ░░░░░░░░░     ░░░░░    
-```
+## 📌 Overview
 
----
+Personal configuration files for **Neovim**, **Zsh**, **tmux**, and **Starship**.
 
-## Cài đặt
+Managed with [GNU Stow](https://www.gnu.org/software/stow/) for easy symlink handling, making it simple to synchronize environments across multiple machines.
 
-1. Clone repo và đặt trong thư mục $HOME
-2. Install package:
+![Screen1](snaps/snap1.png)
 
-```sh
-nvim
-zsh
-starship
-tmux
-tpm
-stow
-```
+![Screen2](snaps/snap2.png)
 
-3. Tiến hành tạo symlink
+![Screen3](snaps/snap3.png)
 
-```sh
+## 📦 Requirements
+
+Make sure the following tools are installed:
+
+- `nvim`
+- `zsh`
+- `tmux`
+- `starship` or `Oh-My-Zsh`
+- `tpm` (tmux plugin manager)
+- `stow`
+
+## 🚀 Installation
+
+Clone the repository and use `stow` to set up the desired modules:
+
+```bash
+git clone https://github.com/thiennc254/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow <package>
 
-example:
-stow nvim
-stow zsh
-stow tmux
-stow starship
+# Example: install Neovim, Zsh, tmux, and Starship configs
+stow nvim zsh tmux starship
 ```
-
-4. Reload terminal
