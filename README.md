@@ -27,7 +27,7 @@ Make sure the following tools are installed:
 
 Clone the repository and use `stow` to set up the desired modules:
 
-```bash
+```sh
 git clone https://github.com/thiennc254/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 

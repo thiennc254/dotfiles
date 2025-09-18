@@ -27,7 +27,7 @@ alias ....='cd ../../..'
 alias gows='cd ~/Workspace'
 
 # Workspace
-alias workspace='tmux has-session -t workspace 2>/dev/null && tmux attach-session -t workspace || tmux new-session -s workspace'
+alias ws='join_tmux'
 
 # Tools
 alias g='git'
@@ -45,4 +45,3 @@ alias cfgs='nvim ~/dotfiles/zsh/.zshrc'
 alias cfghypr='nvim ~/.config/hypr'
 alias scfg='source ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
-alias myws='cd ~/workspace'
