@@ -26,6 +26,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias gows='cd ~/Workspace'
 
+# Use trash instead of rm
+alias rm='echo "This is not recommneded. Use trash instead of rm.\nIf you really want to use that, use \rm";false'
+
 # Workspace
 alias ws='join_tmux'
 

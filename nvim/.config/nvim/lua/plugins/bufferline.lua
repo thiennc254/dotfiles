@@ -11,7 +11,12 @@ return {
         options = {
             mode = "buffers",
             diagnostics = "nvim_lsp",
-            -- separator_style = "slant",
+            indicator = {
+                -- icon = "▎",
+                -- style = "icon" | "underline" | "none",
+                icon = " ",
+                style = "none",
+            },
         },
     },
 }
