@@ -1,0 +1,9 @@
+# Config
+source ~/.zsh/shell
+source ~/.zsh/aliases
+source ~/.zsh/functions
+source ~/.zsh/prompt
+source ~/.zsh/init
+source ~/.zsh/envs
+source ~/.zsh/inputrc
+

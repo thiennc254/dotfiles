@@ -21,7 +21,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
 
 # read config
-source ~/dotfiles/nostow/zsh-cfg/rc
+source ~/.zsh/rc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
