@@ -1,1 +1,13 @@
+# Ignore all backup files
 *.bak
+*.bk
+
+# Ignore all Fish plugins
+nvm*
+_nvm*
+fisher*
+*.theme
+fish/.config/fish/functions/tide
+*_prompt.fish
+_tide*
+

@@ -17,11 +17,12 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/) for easy symlink han
 Make sure the following tools are installed:
 
 - `nvim`
-- `zsh`
+- `zsh` or `fish`
 - `tmux`
-- `starship` or `Oh-My-Zsh`
+- `Oh-My-Zsh`
 - `tpm` (tmux plugin manager)
 - `stow`
+- `fisher` if using fish shell
 
 ## 🚀 Installation
 
