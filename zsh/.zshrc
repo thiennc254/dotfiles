@@ -12,6 +12,7 @@ plugins=(
     fzf-tab zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-history-substring-search
+    you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
