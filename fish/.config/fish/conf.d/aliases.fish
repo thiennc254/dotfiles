@@ -3,6 +3,9 @@ alias scfg "source ~/.config/fish/config.fish"
 alias cfgs "$EDITOR ~/.config/fish"
 alias cfghypr "$EDITOR ~/.config/hypr"
 
+# Fzf
+alias ff "fzf --style full --preview 'bat --style=numbers --color=always {}'"
+
 # List commands
 if type -q eza
     alias ls "eza -lh --group-directories-first --icons=auto"

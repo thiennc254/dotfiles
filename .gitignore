@@ -10,4 +10,5 @@ fisher*
 fish/.config/fish/functions/tide
 *_prompt.fish
 _tide*
-
+fzf*.fish
+_fzf*.fish
