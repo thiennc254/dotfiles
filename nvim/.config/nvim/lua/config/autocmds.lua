@@ -12,3 +12,11 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.wo.conceallevel = 0
     end,
 })
+
+-- Tắt auto comment khi xuống dòng
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+        vim.opt.formatoptions:remove({ "c", "r", "o" })
+    end,
+})

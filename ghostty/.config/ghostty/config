@@ -1,0 +1,29 @@
+# Font
+font-family                             = CaskaydiaCove Nerd Font
+font-size                               = 13.5
+font-feature                            = +calt, +liga, +dlig
+bold-is-bright                          = true
+
+# Themes
+theme                                   = TokyoNight
+
+# Background
+background-opacity                      = 0.35
+background-blur                         = true
+
+# Windows
+window-padding-x                        = 5
+window-padding-y                        = 5
+window-padding-balance                  = true
+window-save-state                       = always
+
+# Cursor
+cursor-style                            = block
+cursor-opacity                          = 0.5
+shell-integration-features              = no-cursor
+mouse-hide-while-typing                 = true
+
+# Clipboard
+clipboard-read                          = allow
+clipboard-write                         = allow
+copy-on-select                          = true
