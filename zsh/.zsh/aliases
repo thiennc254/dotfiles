@@ -27,7 +27,7 @@ alias ....='cd ../../..'
 alias zws='cd ~/Workspace'
 
 # Use trash instead of rm
-alias rm='echo "This is not recommneded. Use trash instead of rm.\nIf you really want to use that, use \rm";false'
+alias rm='echo -e "This is not recommended. Use trash instead of rm."; false'
 
 # Workspace
 alias tmuxws='join_tmux'

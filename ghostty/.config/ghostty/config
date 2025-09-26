@@ -1,7 +1,7 @@
 # Font
 font-family                             = CaskaydiaCove Nerd Font
-font-size                               = 13.5
-font-feature                            = +calt, +liga, +dlig
+font-size                               = 14
+font-feature                            = liga, calt, dlig
 bold-is-bright                          = true
 
 # Themes

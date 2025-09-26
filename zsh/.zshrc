@@ -23,7 +23,8 @@ source /usr/share/nvm/init-nvm.sh
 # read config
 source ~/.zsh/rc
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# P10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
+# Starship
+# eval "$(starship init zsh)"
