@@ -29,6 +29,7 @@ alias zws "cd ~/workspace"
 
 # Git
 alias g git
+alias gst "git status"
 alias ga "git add"
 alias gaa "git add --all"
 alias gcm "git commit -m"
