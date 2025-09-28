@@ -1,34 +1,60 @@
 return {}
 -- return {
---     {
+--     { -- was missing this
 --         "catppuccin/nvim",
+--         lazy = true,
 --         name = "catppuccin",
---         config = function()
---             require("catppuccin").setup({
---                 flavour = "auto", -- latte, frappe, macchiato, mocha
---                 background = {
---                     light = "latte",
---                     dark = "mocha",
+--         opts = {
+--             transparent_background = true,
+--             flavour = "auto",
+--             backgournd = {
+--                 light = "latte",
+--                 dark = "mocha",
+--             },
+--             float = {
+--                 transparent = true,
+--                 -- solid = true,
+--             },
+--             integrations = {
+--                 aerial = true,
+--                 alpha = true,
+--                 cmp = true,
+--                 dashboard = true,
+--                 flash = true,
+--                 gitsigns = true,
+--                 headlines = true,
+--                 illuminate = true,
+--                 indent_blankline = { enabled = true },
+--                 leap = true,
+--                 lsp_trouble = true,
+--                 mason = true,
+--                 markdown = true,
+--                 mini = true,
+--                 native_lsp = {
+--                     enabled = true,
+--                     underlines = {
+--                         errors = { "undercurl" },
+--                         hints = { "undercurl" },
+--                         warnings = { "undercurl" },
+--                         information = { "undercurl" },
+--                     },
 --                 },
---                 transparent_background = true,
---                 float = {
---                     transparent = true,
---                     solid = true,
---                 },
---                 integrations = {
---                     bufferline = true,
---                 },
---             })
---             vim.cmd.colorscheme("catppuccin")
---         end,
---     },
+--                 navic = { enabled = true, custom_bg = "lualine" },
+--                 neotest = true,
+--                 neotree = true,
+--                 noice = true,
+--                 semantic_tokens = true,
+--                 telescope = true,
+--                 treesitter = true,
+--                 treesitter_context = true,
+--                 which_key = true,
+--             },
+--         },
+--     }, -- and this
 --     {
---         "akinsho/bufferline.nvim",
---         opts = function(_, opts)
---             local catppuccin = require("catppuccin.groups.integrations.bufferline")
---             if catppuccin and catppuccin.get then
---                 opts.highlights = catppuccin.get()
---             end
---         end,
+--         "LazyVim/LazyVim",
+--         opts = {
+--             colorscheme = "catppuccin-mocha",
+--         },
 --     },
 -- }

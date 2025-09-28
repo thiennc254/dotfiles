@@ -25,7 +25,7 @@ alias ws join_tmux
 # Directories
 alias cd zd
 alias .... "cd ../.."
-alias zws "cd ~/workspace"
+alias zprj "mkdir -p Projects && cd ~/Projects"
 
 # Git
 alias g git
