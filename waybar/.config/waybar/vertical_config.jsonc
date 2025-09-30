@@ -1,18 +1,16 @@
 {
   "reload_style_on_change": true,
   "layer": "top",
-  "position": "top",
-  "margin-top": 5,
+  "position": "left",
 
-  "modules-left": ["custom/launcher", "clock"],
-  "modules-center": ["custom/update", "hyprland/workspaces"],
+  "modules-left": ["clock", "group/tray-expander"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "custom/screenrecording-indicator",
-    "group/tray-expander",
-    "group/volume",
-    "bluetooth",
+    "custom/update",
     "network",
-    "battery"
+    "group/volume",
+    "custom/launcher"
   ],
 
   "hyprland/workspaces": {
@@ -43,9 +41,7 @@
   },
 
   "clock": {
-    "format": "󰥔 {:L%A, %H:%M}",
-    "format-alt": "󰥔  {:L%b, %d %Y}",
-    "tooltip-format": "Date: {:%H:%M %d-%m-%Y}"
+    "format": "{:L%H\n%M}"
   },
 
   "network": {
@@ -97,27 +93,25 @@
   "pulseaudio/slider": {
     "min": 0,
     "max": 100,
-    "orientation": "horizontal"
+    "orientation": "vertical"
   },
 
   "group/volume": {
-    "orientation": "horizontal",
+    "orientation": "vertical",
     "drawer": {
       "transition-duration": 500,
-      "transiton-left-to-right": true
+      "transiton-top-to-bottom": true
     },
-    "font-size": 14,
     "modules": ["pulseaudio", "pulseaudio/slider"]
   },
 
   "group/tray-expander": {
-    "font-size": 16,
     "orientation": "inherit",
     "transition-duration": 601,
     "drawer": {
       "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", "tray"]
+    "modules": ["custom/expand-icon", "bluetooth", "battery", "tray"]
   },
 
   "bluetooth": {
@@ -129,7 +123,7 @@
   },
 
   "custom/expand-icon": {
-    "format": "",
+    "format": "ᅳ",
     "tooltip": false
   },
 
