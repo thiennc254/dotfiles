@@ -1,0 +1,141 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "left",
+
+  "modules-left": ["clock", "group/tray-expander"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "custom/screenrecording-indicator",
+    "custom/update",
+    "network",
+    "group/volume",
+    "custom/launcher"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "cursor": "pointer"
+  },
+
+  "custom/launcher": {
+    "format": "<span font='omarchy'></span>",
+    "on-click": "omarchy-menu",
+    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+  },
+
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "tooltip-format": "Omarchy update available",
+    "signal": 8,
+    "interval": 3601
+  },
+
+  "cpu": {
+    "interval": 6,
+    "format": "󰍛",
+    "on-click": "$TERMINAL -e btop"
+  },
+
+  "clock": {
+    "format": "{:L%H\n%M}"
+  },
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 4,
+    "spacing": 2,
+    "on-click": "omarchy-launch-wifi"
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>2.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>2.0f}W↑ {capacity}%",
+    "interval": 6,
+    "on-click": "omarchy-menu power",
+    "states": {
+      "warning": 21,
+      "critical": 11
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "$TERMINAL --class=Wiremix -e wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 6,
+    "format-muted": "󰟎",
+    "format-icons": {
+      "default": ["󰋋"]
+    }
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "vertical"
+  },
+
+  "group/volume": {
+    "orientation": "vertical",
+    "drawer": {
+      "transition-duration": 500,
+      "transiton-top-to-bottom": true
+    },
+    "modules": ["pulseaudio", "pulseaudio/slider"]
+  },
+
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "transition-duration": 601,
+    "drawer": {
+      "children-class": "tray-group-item"
+    },
+    "modules": ["custom/expand-icon", "bluetooth", "battery", "tray"]
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueberry"
+  },
+
+  "custom/expand-icon": {
+    "format": "ᅳ",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 13
+  },
+
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 9,
+    "return-type": "json"
+  }
+}

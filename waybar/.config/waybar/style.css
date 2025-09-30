@@ -1,0 +1,141 @@
+@import "./colors.css";
+
+* {
+  font-family: CaskaydiaMono Nerd Font;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 10px;
+}
+
+window#waybar {
+  background-color: alpha(@background, 0.85);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* Workspace - Start */
+#workspaces {
+  min-width: 0px;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button {
+  background: linear-gradient(180deg, @lightskyblue 0%, @cornflowerblue 100%);
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+  min-width: 0px;
+  margin: 5px 0px;
+  border-radius: 3px;
+}
+
+#workspaces button.active {
+  color: transparent;
+  background: linear-gradient(180deg, @cornflowerblue 0%, @mediumpurple 100%);
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  border-radius: 9999px;
+  min-height: 80px;
+}
+
+#workspaces button:hover {
+  background: linear-gradient(180deg, @lightskyblue 0%, @cornflowerblue 100%);
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+  border-radius: 9999px;
+  background-size: 400% 400%;
+}
+
+#workspace button.urgent {
+  background: linear-gradient(180deg, @lightcoral 0%, @sandybrown 100%);
+  color: @foreground;
+  transition: all 0.3s ease-in-out;
+  background-size: 400% 400%;
+  border-radius: 9999px;
+}
+/*End*/
+
+#clock {
+  color: @cornflowerblue;
+  font-family: "CaskaydiaMono Nerd Font";
+  font-weight: bold;
+  font-size: 28px;
+  margin: 5px 5px 0 5px;
+}
+
+#custom-expand-icon {
+  color: @mediumpurple;
+  font-size: 24px;
+}
+
+#tray,
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-launcher,
+#custom-screenrecording-indicator,
+#custom-update {
+  background: alpha(@gunmetal, 0.15);
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#pulseaudio {
+  color: @mediumpurple;
+  padding: 0 1px 0 0;
+}
+
+#tray {
+  padding: 0 0 0 1px;
+}
+
+#custom-update {
+  color: @lightcoral;
+  padding: 0 3px 0 0;
+}
+
+#bluetooth {
+  color: @cornflowerblue;
+}
+
+#battery {
+  color: @sandybrown;
+}
+
+#network {
+  color: @cornflowerblue;
+  padding: 0 5px 0 0;
+}
+
+#custom-launcher {
+  color: @lightskyblue;
+  margin-bottom: 5px;
+  padding: 0 2px 0 0;
+  font-size: 20px;
+}
+
+#pulseaudio-slider {
+  font-size: 12px;
+  padding: 0 0 0 1;
+  margin: 5px 0px;
+}
+
+#pulseaudio-slider slider {
+  border-radius: 2px;
+}
+
+#pulseaudio-slider trough {
+  min-height: 150px;
+  min-width: 5px;
+  border-radius: 9999px;
+  background-color: @darkslategray;
+}
+
+#pulseaudio-slider highlight {
+  border-radius: 9999px;
+  background-color: @mediumaquamarine;
+}

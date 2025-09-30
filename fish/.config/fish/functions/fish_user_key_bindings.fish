@@ -1,3 +1,5 @@
 function fish_user_key_bindings
-    bind \ee open_editor_pwd
+    bind \eo open_editor_pwd
+    bind \cl accept-autosuggestion
+    bind \cz _toggle_fg
 end
