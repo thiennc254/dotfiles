@@ -30,6 +30,7 @@ tooltip {
   transition: all 0.3s ease-in-out;
   font-size: 8px;
   border-radius: 9999px;
+  border: 1px solid alpha(@foreground, 0.15);
 }
 
 #workspaces button {
@@ -75,6 +76,7 @@ tooltip {
   padding: 0px 5px 0px 5px;
   font-size: 14px;
   border-radius: 16px;
+  border: 1px solid alpha(@foreground, 0.15);
 }
 
 #custom-update {
@@ -106,6 +108,7 @@ tooltip {
   margin: 0px 10px;
   padding: 0px 8px;
   border-radius: 16px;
+  border: 1px solid alpha(@foreground, 0.15);
 }
 
 #pulseaudio,
