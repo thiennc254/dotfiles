@@ -22,7 +22,7 @@
   },
 
   "custom/launcher": {
-    "format": "<span font='omarchy'></span>",
+    "format": "",
     "on-click": "omarchy-menu",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
