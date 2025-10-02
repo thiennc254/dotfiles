@@ -3,6 +3,7 @@
 *.bk
 
 # Ignore all Fish plugins
+fish_variables
 nvm*
 _nvm*
 fisher*
