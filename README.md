@@ -2,9 +2,7 @@
 
 ## 📌 Overview
 
-Personal configuration files for **Neovim**, **Zsh**, **tmux**, and **Starship**.
-
-Managed with [GNU Stow](https://www.gnu.org/software/stow/) for easy symlink handling, making it simple to synchronize environments across multiple machines.
+Personal configuration customized based on [Omarchy](https://omarchy.org/) TokyoNight Theme with modifications to Waybar.
 
 ![Screen1](snaps/snap1.png)
 
@@ -12,17 +10,22 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/) for easy symlink han
 
 ![Screen3](snaps/snap3.png)
 
+![Screen4](snaps/snap4.png)
+
+![Screen5](snaps/snap5.png)
+
+![Screen6](snaps/snap6.png)
+
 ## 📦 Requirements
 
 Make sure the following tools are installed:
 
 - `nvim`
 - `zsh` or `fish`
-- `tmux`
-- `Oh-My-Zsh`
-- `tpm` (tmux plugin manager)
+- `tmux` and `tpm` (tmux plugin manager)
+- `Oh-My-Zsh` or `Starship`
 - `stow`
-- `fisher` if using fish shell
+- `fisher` if using fish
 
 ## 🚀 Installation
 
