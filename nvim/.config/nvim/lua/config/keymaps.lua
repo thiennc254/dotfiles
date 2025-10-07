@@ -1,9 +1,6 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- [Select all]
-keymap.set("n", "<C-a>", "ggVG")
-
 -- [Tmux - Vim Navigator]
 keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
 keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)

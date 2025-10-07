@@ -1,7 +1,10 @@
 # Shortcut config
 alias scfg "source ~/.config/fish/config.fish"
-alias cfgs="$EDITOR ~/.config/fish/"
-alias cfghypr "$EDITOR ~/.config/hypr/"
+alias cfgs="nvim ~/.config/fish/"
+alias cfghypr "nvim ~/.config/hypr/"
+
+# Clean
+alias cls clear
 
 # Fzf
 alias ff "fzf --style full --preview 'bat --style=numbers --color=always {}'"
