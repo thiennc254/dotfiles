@@ -1,60 +1,74 @@
-return {}
--- return {
---     { -- was missing this
---         "catppuccin/nvim",
---         lazy = true,
---         name = "catppuccin",
---         opts = {
---             transparent_background = true,
---             flavour = "auto",
---             backgournd = {
---                 light = "latte",
---                 dark = "mocha",
---             },
---             float = {
---                 transparent = true,
---                 -- solid = true,
---             },
---             integrations = {
---                 aerial = true,
---                 alpha = true,
---                 cmp = true,
---                 dashboard = true,
---                 flash = true,
---                 gitsigns = true,
---                 headlines = true,
---                 illuminate = true,
---                 indent_blankline = { enabled = true },
---                 leap = true,
---                 lsp_trouble = true,
---                 mason = true,
---                 markdown = true,
---                 mini = true,
---                 native_lsp = {
---                     enabled = true,
---                     underlines = {
---                         errors = { "undercurl" },
---                         hints = { "undercurl" },
---                         warnings = { "undercurl" },
---                         information = { "undercurl" },
---                     },
---                 },
---                 navic = { enabled = true, custom_bg = "lualine" },
---                 neotest = true,
---                 neotree = true,
---                 noice = true,
---                 semantic_tokens = true,
---                 telescope = true,
---                 treesitter = true,
---                 treesitter_context = true,
---                 which_key = true,
---             },
---         },
---     }, -- and this
---     {
---         "LazyVim/LazyVim",
---         opts = {
---             colorscheme = "catppuccin-mocha",
---         },
---     },
--- }
+return {
+    {
+        "catppuccin/nvim",
+        lazy = true,
+        name = "catppuccin",
+        opts = {
+            transparent_background = true,
+            flavour = "auto",
+            backgournd = {
+                light = "latte",
+                dark = "mocha",
+            },
+            float = {
+                transparent = true,
+                -- solid = true,
+            },
+            styles = {
+                comments = { "italic" },
+                conditionals = { "italic" },
+                loops = {},
+                functions = {},
+                keywords = {},
+                strings = {},
+                variables = {},
+                numbers = {},
+                booleans = {},
+                properties = {},
+                types = {},
+                operators = {},
+                -- miscs = {},-- Uncomment to turn off hard-coded styles
+            },
+            integrations = {
+                aerial = true,
+                alpha = true,
+                cmp = true,
+                dashboard = true,
+                flash = true,
+                gitsigns = true,
+                headlines = true,
+                illuminate = true,
+                indent_blankline = { enabled = true },
+                leap = true,
+                lsp_trouble = true,
+                mason = true,
+                markdown = true,
+                mini = true,
+                native_lsp = {
+                    enabled = true,
+                    underlines = {
+                        errors = { "undercurl" },
+                        hints = { "undercurl" },
+                        warnings = { "undercurl" },
+                        information = { "undercurl" },
+                    },
+                },
+                navic = { enabled = true, custom_bg = "lualine" },
+                neotest = true,
+                neotree = true,
+                noice = true,
+                semantic_tokens = true,
+                telescope = true,
+                treesitter = true,
+                treesitter_context = true,
+                which_key = true,
+            },
+        },
+    },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "catppuccin-mocha",
+        },
+    },
+}

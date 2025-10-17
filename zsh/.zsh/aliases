@@ -30,7 +30,7 @@ alias zws='cd ~/Workspace'
 alias rm='echo -e "This is not recommended. Use trash instead of rm."; false'
 
 # Workspace
-alias tmuxws='join_tmux'
+alias tws='create_tmux_workspace'
 
 # Tools
 alias g='git'

@@ -55,13 +55,9 @@ mkfile() {
   mkdir -p "$(dirname "$1")" && touch "$1"; 
 }
 
-# Join Tmux Workspace
-join_tmux() {
-  if [[ -z "$TMUX" ]] && command -v tmux >/dev/null; then
-    if tmux has-session -t workspace 2>/dev/null; then
-      tmux attach-session -t workspace
-    else
-      tmux new-session -s workspace
-    fi
-  fi
+# Tmux Workspace
+create_tmux_workspace() {
+  tmux has-session -t main 2>/dev/null || tmux new-session -d -s main
+  tmux has-session -t sub 2>/dev/null || tmux new-session -d -s sub
+  tmux attach -t main
 }
