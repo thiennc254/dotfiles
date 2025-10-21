@@ -21,6 +21,3 @@ keymap.set("n", "<Tab>", ">>", { desc = "Indent Line (Normal mode)" }) -- Tab
 keymap.set("n", "<S-Tab>", "<<", { desc = "Unindent Line (Normal mode)" }) -- Shift Tab
 keymap.set("v", "<Tab>", ">gv", { desc = "Indent Selection (Visual mode)" }) -- Tab
 keymap.set("v", "<S-Tab>", "<gv", { desc = "Unindent Selection (Visual mode)" }) -- Shift Tab
-
--- Open File Explorer - Snack
--- ~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/extras/editor/snacks_explorer.lua
