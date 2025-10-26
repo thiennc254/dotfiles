@@ -57,7 +57,6 @@ mkfile() {
 
 # Tmux Workspace
 create_tmux_workspace() {
-  tmux has-session -t main 2>/dev/null || tmux new-session -d -s main
-  tmux has-session -t sub 2>/dev/null || tmux new-session -d -s sub
-  tmux attach -t main
+  tmux has-session -t NCT 2>/dev/null || tmux new-session -d -s NCT
+  tmux attach -t NCT
 }

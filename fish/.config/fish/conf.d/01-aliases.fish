@@ -8,8 +8,10 @@ alias clr clear
 alias vi nvim
 alias vim nvim
 
+#------ Tmux ------
+alias tws create_tmux_workspace
+
 #------ FZF ------
-# alias ff "fzf --style full --preview 'bat --style=numbers --color=always {}'"
 alias ff 'set -l dir (fd . -td --hidden --follow -E .git | fzf --style full --preview "eza -1 --icons --group-directories-first --color=always {}" --height=80% --layout=reverse --border --select-1 --exit-0); and test -n "$dir"; and cd "$dir"'
 alias fe findnedit
 

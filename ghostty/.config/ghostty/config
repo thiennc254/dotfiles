@@ -1,29 +1,34 @@
-# Font
+#============================#
+# Ghostty Configuration File #
+#============================#
+
+#==== Font ====
 font-family                             = CaskaydiaCove Nerd Font
 font-size                               = 14
 font-feature                            = liga, calt, dlig
 bold-is-bright                          = true
 
-# Themes
-theme                                   = TokyoNight
+#==== Themes ====
+theme                                   = Catppuccin Mocha
 
-# Background
+#==== Background ====
 background-opacity                      = 0.35
 background-blur                         = true
 
-# Windows
+#==== Windows ====
 window-padding-x                        = 5
-window-padding-y                        = 5
+window-padding-y                        = 2
 window-padding-balance                  = true
 window-save-state                       = always
 
-# Cursor
+#==== Cursor =====
 cursor-style                            = block
-cursor-opacity                          = 0.5
 shell-integration-features              = no-cursor
-mouse-hide-while-typing                 = true
 
-# Clipboard
+# ==== Shaders ====
+# custom-shader = shaders/cursor_smear.glsl
+
+#==== Clipboard ====
 clipboard-read                          = allow
 clipboard-write                         = allow
-copy-on-select                          = true
+# copy-on-select                          = true

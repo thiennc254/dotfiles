@@ -24,6 +24,7 @@
   "custom/launcher": {
     "format": "",
     "on-click": "omarchy-menu",
+    "on-click-right": "omarchy-launch-terminal",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
 

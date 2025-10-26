@@ -10,6 +10,8 @@ $cmd_duration\
 $golang\
 $nodejs\
 $python\
+$c\
+$cpp\
 $docker_context\
 $line_break\
 $character\
@@ -94,6 +96,16 @@ symbol = ""
 style = "fg:color6"
 format = "[ $symbol ($version)]($style)"
 
+[c]
+symbol = " "
+style = "bg:color5"
+format = "[ $symbol ($version)]($style)"
+
+[cpp]
+symbol = " "
+style = "fg:color5"
+format = "[ $symbol ($version)]($style)"
+
 [docker_context]
 symbol = ""
 style = "fg:color4"
@@ -104,6 +116,39 @@ disabled = false
 time_format = "%R"
 style = "fg:color7"
 format = " [$time]($style)"
+
+[line_break]
+disabled = false
+
+[os]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[gradle]
+disabled = true
+
+[haskell]
+disabled = true
+
+[java]
+disabled = true
+
+[julia]
+disabled = true
+
+[nim]
+disabled = true
 
 [palettes.catppuccin_mocha]
 fg = "#CDD6F4"
@@ -128,39 +173,3 @@ color4 = "#7aa2f7"
 color5 = "#bb9af7"
 color6 = "#7dcfff"
 color7 = "#a9b1d6"
-
-[line_break]
-disabled = false
-
-[os]
-disabled = true
-
-[rust]
-disabled = true
-
-[scala]
-disabled = true
-
-[c]
-disabled = true
-
-[elixir]
-disabled = true
-
-[elm]
-disabled = true
-
-[gradle]
-disabled = true
-
-[haskell]
-disabled = true
-
-[java]
-disabled = true
-
-[julia]
-disabled = true
-
-[nim]
-disabled = true
