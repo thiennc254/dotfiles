@@ -1,4 +1,4 @@
-function findnedit --description "FZF: pick file or directory, open or enter then edit"
+function findnedit --description 'FZF: pick file or directory, open or enter then edit'
     set -l editor $EDITOR
 
     set -l list_cmd
@@ -8,13 +8,21 @@ function findnedit --description "FZF: pick file or directory, open or enter the
         set list_cmd "find . -mindepth 1 -not -path '*/.git/*'"
     end
 
-    set -l preview_cmd '
-        if test -d {}
-            eza -1 --icons --group-directories-first --color=always {} 2>/dev/null; or tree -C -L 1 {}
+    set -l preview_cmd 'bash -c "
+        if [ -d {} ]; then
+            if command -v eza >/dev/null 2>&1; then
+                eza -1 --icons --group-directories-first --color=always {} 2>/dev/null
+            else
+                tree -C -L 1 {}
+            fi
         else
-            bat --style=numbers --color=always {} 2>/dev/null; or head -n 100 {}
-        end
-    '
+            if command -v bat >/dev/null 2>&1; then
+                bat --style=numbers --color=always {} 2>/dev/null
+            else
+                head -n 100 {}
+            fi
+        fi
+    "'
 
     set -l target (eval $list_cmd | fzf \
         --prompt="📂 Search > " \

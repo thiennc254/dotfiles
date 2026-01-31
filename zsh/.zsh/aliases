@@ -44,7 +44,7 @@ alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
 # Edit config
-alias cfgs='$EDITOR ~/dotfiles/zsh/.zshrc'
-alias cfghypr='$EDITOR ~/.config/hypr'
-alias scfg='source ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
+
+# Fzf
+alias fe='findnedit'

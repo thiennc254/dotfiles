@@ -1,5 +1,5 @@
-@import "./catppuccin.css";
-/* @import "./tokyonight.css"; */
+/* @import "./catppuccin.css"; */
+@import "./tokyonight.css";
 
 * {
   font-family: "CaskaydiaCove Nerd Font";
@@ -173,4 +173,13 @@ tooltip {
 #battery {
   color: @color2;
   padding: 0 2px;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
 }

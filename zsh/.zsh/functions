@@ -60,3 +60,43 @@ create_tmux_workspace() {
   tmux has-session -t NCT 2>/dev/null || tmux new-session -d -s NCT
   tmux attach -t NCT
 }
+
+# Fzf custom function
+# findnedit for bash/zsh
+findnedit() {
+  local editor="${EDITOR:-vim}"
+
+  # Lệnh liệt kê: ưu tiên fd, fallback find
+  local list_cmd
+  if command -v fd >/dev/null 2>&1; then
+    list_cmd='fd . --hidden --follow --exclude .git'
+  else
+    list_cmd='find . -mindepth 1 -not -path "*/.git/*"'
+  fi
+
+  # Script preview cho fzf (ANSI-C quoting để giữ xuống dòng)
+  local preview_cmd
+  preview_cmd=$'if [ -d {} ]; then
+    eza -1 --icons --group-directories-first --color=always {} 2>/dev/null || tree -C -L 1 {}
+  else
+    bat --style=numbers --color=always {} 2>/dev/null || head -n 100 {}
+  fi'
+
+  # Gọi fzf để chọn
+  local target
+  target=$(eval "$list_cmd" | fzf \
+    --prompt='📂 Search > ' \
+    --height=80% --layout=reverse --border \
+    --preview "$preview_cmd" --preview-window=right:60%:wrap \
+    --select-1 --exit-0) || return
+
+  [ -n "$target" ] || return
+
+  if [ -d "$target" ]; then
+    cd "$target" || return
+    # Muốn mở editor khi cd vào thư mục? Bỏ comment dòng dưới:
+    # command "$editor"
+  else
+    command "$editor" "$target"
+  fi
+}

@@ -1,15 +1,15 @@
 -- UI & Display
 vim.opt.wrap = true
-vim.opt.autoindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.autoindent = true
 
 -- Searching
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.ignorecase = true
 
 -- Indentation
 vim.opt.smartindent = true

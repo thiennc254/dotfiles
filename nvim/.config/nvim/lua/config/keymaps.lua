@@ -2,7 +2,7 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Exit Insert mode
-keymap.set("i", "jj", "<Esc>", { noremap = false })
+-- keymap.set("i", "jj", "<Esc>", { noremap = false })
 
 -- [Tmux - Vim Navigator]
 keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
