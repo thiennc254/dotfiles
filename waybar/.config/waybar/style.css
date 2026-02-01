@@ -112,9 +112,12 @@ tooltip {
   border: 1px solid alpha(@color4, 0.45);
 }
 
+#custom-voxtype,
+#custom-screenrecording-indicator,
 #pulseaudio,
 #custom-expand-icon,
 #network,
+#cpu,
 #bluetooth,
 #battery {
   margin: 0px 5px;
@@ -167,7 +170,12 @@ tooltip {
 
 #network {
   color: @color1;
-  padding: 0 5px 0 0;
+  padding: 0 2px 0 0;
+}
+
+#cpu {
+  color: @color6;
+  padding: 0 2px;
 }
 
 #battery {
@@ -175,11 +183,15 @@ tooltip {
   padding: 0 2px;
 }
 
-#custom-voxtype {
-  min-width: 12px;
-  margin: 0 0 0 7.5px;
-}
+/* #custom-voxtype { */
+/*   min-width: 12px; */
+/*   margin: 0 0 0 7.5px; */
+/* } */
 
 #custom-voxtype.recording {
-  color: #a55555;
+  color: @color2;
+}
+
+#custom-screenrecording-indicator{
+  color: @color1;
 }

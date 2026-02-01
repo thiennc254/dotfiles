@@ -7,11 +7,13 @@
   "modules-left": ["custom/launcher", "clock"],
   "modules-center": ["custom/update", "hyprland/workspaces"],
   "modules-right": [
+    "custom/voxtype",
     "custom/screenrecording-indicator",
     "group/tray-expander",
     "group/volume",
     "bluetooth",
     "network",
+    "cpu",
     "battery"
   ],
 
@@ -41,20 +43,22 @@
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
-    "signal": 8,
-    "interval": 3601
+    "signal": 7,
+    "interval": 21600
   },
 
   "cpu": {
-    "interval": 6,
+    "interval": 5,
     "format": "󰍛",
-    "on-click": "omarchy-launch-or-focus-tui btop"
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "on-click-right": "kitty"
   },
 
   "clock": {
-    "format": "󰥔 {:L%A, %H:%M}",
+    "format": "󰥔  {:L%A, %H:%M}",
     "format-alt": "󰥔  {:L%b, %d %Y}",
-    "tooltip-format": "Date: {:%H:%M %d-%m-%Y}"
+    "tooltip-format": "Date: {:%H:%M %d-%m-%Y}",
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
 
   "network": {
@@ -66,8 +70,8 @@
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
-    "interval": 4,
-    "spacing": 2,
+    "interval": 3,
+    "spacing": 1,
     "on-click": "omarchy-launch-wifi"
   },
 
@@ -83,11 +87,11 @@
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>2.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>2.0f}W↑ {capacity}%",
-    "interval": 6,
+    "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
-      "warning": 21,
-      "critical": 11
+      "warning": 20,
+      "critical": 10
     }
   },
 
@@ -96,7 +100,7 @@
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
-    "scroll-step": 6,
+    "scroll-step": 5,
     "format-muted": "󰟎",
     "format-icons": {
       "headphone": "",
@@ -123,7 +127,7 @@
   "group/tray-expander": {
     "font-size": 16,
     "orientation": "inherit",
-    "transition-duration": 601,
+    "transition-duration": 600,
     "drawer": {
       "children-class": "tray-group-item"
     },
@@ -166,7 +170,7 @@
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
-    "signal": 9,
+    "signal": 8,
     "return-type": "json"
   }
 }
