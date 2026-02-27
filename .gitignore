@@ -13,3 +13,6 @@ fish/.config/fish/functions/tide
 _tide*
 fzf*.fish
 _fzf*.fish
+
+# Ignore tmux plugins
+tmux/.config/tmux/plugins
