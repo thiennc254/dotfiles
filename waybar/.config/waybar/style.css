@@ -2,7 +2,7 @@
 @import "./tokyonight.css";
 
 * {
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: 'CaskaydiaMono Nerd Font';
   border: none;
   border-radius: 0;
   padding: 0;
@@ -11,8 +11,6 @@
 }
 
 window#waybar {
-  /* background-color: alpha(@background, 0.85); */
-  /* box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22); */
   background-color: transparent;
 }
 
@@ -22,9 +20,9 @@ tooltip {
   border-radius: 12px;
 }
 
-/* Workspace - Start */
+/* Workspace */
 #workspaces {
-  background: alpha(@background, 0.85);
+  background: alpha(@background, 0.55);
   min-width: 0px;
   margin: 0px;
   padding: 0px 8px 0px 8px;
@@ -66,13 +64,12 @@ tooltip {
   background-size: 400% 400%;
   border-radius: 9999px;
 }
-/*End*/
 
 /* Left modules */
 #custom-update,
 #clock,
 #custom-launcher {
-  background: alpha(@background, 0.85);
+  background: alpha(@background, 0.55);
   margin: 0px 5px 0px 5px;
   padding: 0px 5px 0px 5px;
   font-size: 14px;
@@ -105,7 +102,7 @@ tooltip {
 
 /* Right module */
 .modules-right {
-  background: alpha(@background, 0.85);
+  background: alpha(@background, 0.55);
   margin: 0px 10px;
   padding: 0px 8px;
   border-radius: 16px;
@@ -113,7 +110,6 @@ tooltip {
 }
 
 #custom-voxtype,
-#custom-screenrecording-indicator,
 #pulseaudio,
 #custom-expand-icon,
 #network,
@@ -192,6 +188,7 @@ tooltip {
   color: @color2;
 }
 
-#custom-screenrecording-indicator{
-  color: @color1;
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
 }

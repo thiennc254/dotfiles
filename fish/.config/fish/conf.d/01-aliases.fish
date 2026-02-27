@@ -29,6 +29,7 @@ else
 end
 
 #------ Change Directories ------
+alias z zd
 alias cd zd
 alias .... "cd ../.."
 alias zws "mkdir -p ~/Workspace && cd ~/Workspace"
