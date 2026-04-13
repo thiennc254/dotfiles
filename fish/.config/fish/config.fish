@@ -79,9 +79,14 @@ if status is-interactive
             if test -z "$SSH_TTY"
                 if test -n "$TERM" -a "$TERM" != dumb
                     set -l session (whoami)
-                    tmux has-session -t $session 2>/dev/null
-                    and exec tmux attach -t $session
-                    or exec tmux new -s $session
+                    # tmux has-session -t $session 2>/dev/null
+                    # and exec tmux attach -t $session
+                    # or exec tmux new -s $session
+                    if tmux has-session -t $session 2>/dev/null
+                        tmux attach -t $session
+                    else
+                        tmux new -s $session
+                    end
                 end
             end
         end

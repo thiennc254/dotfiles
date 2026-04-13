@@ -1,13 +1,16 @@
 return {
-    "saghen/blink.cmp",
-    opts = {
-        keymap = {
-            ["<C-j>"] = {
-                "select_next",
-            },
-            ["<C-k>"] = {
-                "select_prev",
-            },
-        },
+  "saghen/blink.cmp",
+  opts = {
+    keymap = {
+      ["<Tab>"] = {
+        "select_next",
+      },
+      ["<S-Tab>"] = {
+        "select_prev",
+      },
     },
+    cmdline = {
+      enabled = false,
+    },
+  },
 }

@@ -1,8 +1,11 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Exit Insert mode
--- keymap.set("i", "jj", "<Esc>", { noremap = false })
+-- [Exit Insert mode]
+keymap.set("i", "jk", "<Esc>", { noremap = false })
+
+-- [No highlight search]
+keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>")
 
 -- [Tmux - Vim Navigator]
 keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
@@ -13,10 +16,11 @@ keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
 -- [Command mode]
 keymap.set("n", ";", ":")
 
--- [Buffer]
-keymap.set("n", "<leader>w", "<cmd>bd<CR>")
+-- [Clipboard]
+keymap.set({ "n", "v" }, "y", '"+y')
+keymap.set({ "n", "v" }, "p", '"+p')
 
--- Indentation
+-- [Indentation]
 keymap.set("n", "<Tab>", ">>", { desc = "Indent Line (Normal mode)" }) -- Tab
 keymap.set("n", "<S-Tab>", "<<", { desc = "Unindent Line (Normal mode)" }) -- Shift Tab
 keymap.set("v", "<Tab>", ">gv", { desc = "Indent Selection (Visual mode)" }) -- Tab

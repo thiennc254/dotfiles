@@ -1,194 +1,155 @@
-/* @import "./catppuccin.css"; */
-@import "./tokyonight.css";
+@import "./themes/catppuccin-mocha.css";
 
 * {
-  font-family: 'CaskaydiaMono Nerd Font';
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 18px;
+    font-family: "CaskaydiaCove Nerd Font Mono";
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 24px;
+}
+
+/* GENERAL */
+.modules-left,
+.modules-right {
+    background-color: alpha(@background, 0.85);
+    border-radius: 14px;
+    font-size: 13.5px;
+    color: @foreground;
+    border: 2px solid alpha(@color7, 0.5);
+}
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-center {
+    font-size: 13.5px;
+}
+
+.modules-right {
+    margin-right: 5px;
 }
 
 window#waybar {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 tooltip {
-  background: alpha(@background, 0.85);
-  border: 1px solid #000;
-  border-radius: 12px;
+    border-radius: 14px;
+    background: alpha(@background, 0.85);
 }
 
-/* Workspace */
+/* LEFT MODULES */
+#custom-menu {
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color4;
+}
+
+#window {
+    margin-right: 8px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+/* CENTER MODULES */
+#custom-update {
+    margin-right: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color2;
+}
+
 #workspaces {
-  background: alpha(@background, 0.55);
-  min-width: 0px;
-  margin: 0px;
-  padding: 0px 8px 0px 8px;
-  transition: all 0.3s ease-in-out;
-  font-size: 8px;
-  border-radius: 9999px;
-  border: 2px solid alpha(@color4, 0.35);
+    background-color: alpha(@background, 0.85);
+    border-radius: 14px;
+    padding: 0 10px;
+    border: 2px solid alpha(@color7, 0.5);
 }
 
 #workspaces button {
-  background: linear-gradient(135deg, @color4 0%, @color4 100%);
-  color: transparent;
-  transition: all 0.3s ease-in-out;
-  min-height: 0px;
-  margin: 8px 5px;
-  border-radius: 9999px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+    color: alpha(@color4, 0.9);
+    transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.active {
-  color: transparent;
-  background: linear-gradient(135deg, @color4 0%, @color5 100%);
-  transition: all 0.3s ease-in-out;
-  border-radius: 9999px;
-  min-width: 100px;
+#workspaces button.active,
+#workspaces button.active.empty {
+    color: @color3;
+}
+
+#workspaces button.empty {
+    color: alpha(@foreground, 0.5);
+}
+
+#workspaces button.urgen {
+    color: @color17;
 }
 
 #workspaces button:hover {
-  background: linear-gradient(90deg, @color1 0%, @color5 100%);
-  color: transparent;
-  transition: all 0.3s ease-in-out;
-  border-radius: 9999px;
-  background-size: 400% 400%;
-}
-
-#workspace button.urgent {
-  background: linear-gradient(180deg, @color3 0%, @color1 100%);
-  color: @foreground;
-  transition: all 0.3s ease-in-out;
-  background-size: 400% 400%;
-  border-radius: 9999px;
-}
-
-/* Left modules */
-#custom-update,
-#clock,
-#custom-launcher {
-  background: alpha(@background, 0.55);
-  margin: 0px 5px 0px 5px;
-  padding: 0px 5px 0px 5px;
-  font-size: 14px;
-  border-radius: 16px;
-  border: 1px solid alpha(@color4, 0.45);
-}
-
-#custom-update {
-  color: @foreground;
-  font-weight: bold;
-  font-size: 14px;
-  margin: 0px 10px;
-  padding: 1px 6px 0px 3px;
-}
-
-#custom-launcher {
-  color: @foreground;
-  margin-left: 10px;
-  padding: 0px 6px 0px 5px;
-  font-size: 18px;
-}
-
-#clock {
-  color: @color4;
-  font-weight: bold;
-  font-size: 14px;
-  margin-left: 10px;
-  padding: 0px 10px 0px 10px;
-}
-
-/* Right module */
-.modules-right {
-  background: alpha(@background, 0.55);
-  margin: 0px 10px;
-  padding: 0px 8px;
-  border-radius: 16px;
-  border: 1px solid alpha(@color4, 0.45);
+    color: @color1;
+    background: transparent;
 }
 
 #custom-voxtype,
-#pulseaudio,
-#custom-expand-icon,
-#network,
-#cpu,
-#bluetooth,
-#battery {
-  margin: 0px 5px;
+#custom-screenrecording-indicator {
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color1;
+}
+
+/* RIGHT MODULES */
+#tray,
+#wireplumber.text,
+#bluetooth.text,
+#network.text,
+#battery.text {
+    margin-right: 5px;
+    font-weight: bold;
 }
 
 #custom-expand-icon {
-  color: @color6;
-  padding: 0 2px 0 0;
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color3;
 }
 
-#tray {
-  margin-left: 5px;
-  padding: 0 2px;
+#wireplumber.icon {
+    padding: 0 5px;
+    font-size: 19px;
+    color: @color1;
 }
 
-#pulseaudio {
-  color: @color3;
-  margin-left: 10px;
-  padding: 0 3px 0 1px;
+#bluetooth.icon {
+    padding: 0 5px;
+    font-size: 17px;
+    color: @color4;
 }
 
-#pulseaudio-slider {
-  font-size: 10px;
+#network.icon {
+    padding: 0 5px;
+    font-size: 21px;
+    color: @color5;
 }
 
-#pulseaudio-slider slider {
-  border-radius: 3px;
-  min-height: 10px;
-  min-width: 15px;
+#battery.icon {
+    padding: 0 5px;
+    font-size: 13.5px;
+    color: @color2;
 }
 
-#pulseaudio-slider trough {
-  min-height: 5px;
-  min-width: 150px;
-  border-radius: 9999px;
-  background-color: @color0;
+#clock.icon {
+    font-size: 12px;
+    font-weight: bold;
 }
 
-#pulseaudio-slider highlight {
-  min-height: 0px;
-  min-width: 5px;
-  border-radius: 9999px;
-  background: linear-gradient(90deg, @color3 0%, @color5 100%);
-}
-
-#bluetooth {
-  color: @color5;
-  padding: 0 2px;
-}
-
-#network {
-  color: @color1;
-  padding: 0 2px 0 0;
-}
-
-#cpu {
-  color: @color6;
-  padding: 0 2px;
-}
-
-#battery {
-  color: @color2;
-  padding: 0 2px;
-}
-
-/* #custom-voxtype { */
-/*   min-width: 12px; */
-/*   margin: 0 0 0 7.5px; */
-/* } */
-
-#custom-voxtype.recording {
-  color: @color2;
-}
-
-#custom-idle-indicator.active,
-#custom-notification-silencing-indicator.active {
-  color: #a55555;
+#clock.text {
+    margin: 0 8px 0 5px;
+    font-weight: bold;
 }
