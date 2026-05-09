@@ -1,19 +1,23 @@
 #------ Arch Utils ------
 alias checkpkgupdate 'grep "upgraded" /var/log/pacman.log | tail -n 10'
 alias checkfullupdate 'grep "starting full system upgrade" /var/log/pacman.log | tail -n 5'
+
 alias cls clear
 alias clr clear
+
+abbr -a fish-reload __reload
+abbr -a mkfile __mkfile
 
 #------ Editor ------
 alias vi nvim
 alias vim nvim
 
-#------ Tmux ------
-alias tws create_tmux_workspace
+#------ Zoxide ------
+abbr -a z __z
 
 #------ FZF ------
-alias ff 'set -l dir (fd . -td --hidden --follow -E .git | fzf --style full --preview "eza -1 --icons --group-directories-first --color=always {}" --height=80% --layout=reverse --border --select-1 --exit-0); and test -n "$dir"; and cd "$dir"'
-alias fe findnedit
+abbr -a ff __ff
+abbr -a fe __find-n-edit
 
 #------ List commands ------
 if type -q eza
@@ -28,15 +32,9 @@ else
     alias lta "lt -a"
 end
 
-#------ Change Directories ------
-alias z zd
-alias cd zd
-alias .... "cd ../.."
-alias zws "mkdir -p ~/Workspace && cd ~/Workspace"
-
 #------ Git Utils ------
-alias lg lazygit
-alias g git
+abbr -a lg lazygit
+abbr -a g git
 abbr -a gst 'git status'
 abbr -a ga 'git add'
 abbr -a gaa 'git add --all'
