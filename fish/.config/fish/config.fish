@@ -25,7 +25,7 @@ end
 
 # mise (language/runtime manager)
 if type -q mise
-    mise activate fish | source
+    mise activate fish --silent-wheels | source
 end
 
 # ----------------------------------------
@@ -51,6 +51,28 @@ if type -q starship
 end
 
 # ----------------------------------------
+# Smart tmux auto-start
+# ----------------------------------------
+
+if status is-interactive
+    and not set -q TMUX
+    and not set -q NO_TMUX
+    and type -q tmux
+    and test -z "$SSH_TTY"
+    and test "$TERM" != dumb
+
+    set -l session_name (whoami)
+
+    if tmux has-session -t $session_name 2>/dev/null
+        tmux attach -t $session_name
+    else
+        tmux new -s $session_name
+    end
+
+    echo "Exit Tmux !!!"
+end
+
+# ----------------------------------------
 # Local machine overrides
 # ----------------------------------------
 
@@ -58,37 +80,7 @@ end
 # Create this file manually if you need machine-specific settings:
 #   ~/.config/fish-local/config-local.fish
 # (This file is not tracked in dotfiles repo)
-
 set -l LOCAL_CONFIG ~/.config/fish-local/config-local.fish
 if test -f $LOCAL_CONFIG
     source $LOCAL_CONFIG
-end
-
-# ----------------------------------------
-# Smart tmux auto-start
-# ----------------------------------------
-
-if status is-interactive
-    # Conditions to start tmux:
-    # - Not already inside tmux
-    # - Not inside SSH
-    # - Running on a real TTY
-    # - tmux exists
-    if type -q tmux
-        if not set -q TMUX
-            if test -z "$SSH_TTY"
-                if test -n "$TERM" -a "$TERM" != dumb
-                    set -l session (whoami)
-                    # tmux has-session -t $session 2>/dev/null
-                    # and exec tmux attach -t $session
-                    # or exec tmux new -s $session
-                    if tmux has-session -t $session 2>/dev/null
-                        tmux attach -t $session
-                    else
-                        tmux new -s $session
-                    end
-                end
-            end
-        end
-    end
 end

@@ -10,10 +10,7 @@
     "modules-left": ["group/launcher"],
 
     "modules-center": [
-        "custom/update",
         "hyprland/workspaces",
-        "custom/voxtype",
-        "custom/screenrecording-indicator"
     ],
 
     "modules-right": [
@@ -73,8 +70,6 @@
             "5": [],
             "6": [],
             "7": [],
-            "8": [],
-            "9": []
         }
     },
 

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+[[ -f "$HOME/.local/state/hypr/toggles/$1"]]
