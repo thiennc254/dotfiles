@@ -1,2 +1,0 @@
-# Binds Accpet the current susgestion to Ctrl+Space
-bindkey '^l' autosuggest-accept

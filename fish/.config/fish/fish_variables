@@ -1,0 +1,6 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export --path PATH:/home/azty/\x2elocal/bin\x1e/home/azty/\x2elocal/share/mise/installs/node/26\x2e1\x2e0/bin\x1e/home/azty/\x2ecargo/bin\x1e/home/azty/\x2ecargo/bin\x1e/home/azty/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/azty/\x2elocal/bin
+SETUVAR --export XMODIFIERS:\x40im\x3dfcitx
+SETUVAR __fish_initialized:4300
+SETUVAR fish_user_paths:/home/azty/\x2elocal/bin

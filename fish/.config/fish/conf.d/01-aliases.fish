@@ -1,23 +1,20 @@
 #------ Arch Utils ------
-alias checkpkgupdate 'grep "upgraded" /var/log/pacman.log | tail -n 10'
-alias checkfullupdate 'grep "starting full system upgrade" /var/log/pacman.log | tail -n 5'
+abbr -a checkpkgupdate 'grep "upgraded" /var/log/pacman.log | tail -n 10'
+abbr -a checkfullupdate 'grep "starting full system upgrade" /var/log/pacman.log | tail -n 5'
 
-alias cls clear
-alias clr clear
+abbr -a cls clear
+abbr -a clr clear
 
-abbr -a fish-reload __reload
+abbr -a fishreload __reload
 abbr -a mkfile __mkfile
+abbr -a hyprreload "hyprctl reload"
 
 #------ Editor ------
-alias vi nvim
-alias vim nvim
+abbr -a v nvim
+abbr -a v. "nvim ."
 
 #------ Zoxide ------
 abbr -a z __z
-
-#------ FZF ------
-abbr -a ff __ff
-abbr -a fe __find-n-edit
 
 #------ List commands ------
 if type -q eza
@@ -49,3 +46,6 @@ alias d docker
 
 #------ Rails ------
 alias r rails
+
+#------ Tmux ------
+abbr -a tws "tmux a -t $(whoami)"

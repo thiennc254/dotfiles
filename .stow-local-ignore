@@ -1,2 +1,10 @@
+# Bỏ qua nguyên cả package (thư mục)
+^background$
+^notes$
+^hypr\.bk$
+^README\.md$
+^.*\.bak$
+
+# Các file ẩn hệ thống
 \.git
-^snaps$
+\.gitignore

@@ -1,17 +1,9 @@
-switch (uname)
-    case Linux
-        set -Ux PATH $HOME/.local/bin $PATH
-        # XDG config directory
-        set -x XDG_CONFIG_HOME $HOME/.config
-        set -x PATH $HOME/.cargo/bin $PATH
-end
+set -gx EDITOR nvim
+set -gx VISUAL $EDITOR
+set -gx SUDO_EDITOR $EDITOR
 
-# fzf  show hidden files by default
-set fzf_fd_opts --hidden --exclude .git
+set -gx MISE_QUIET 1
+set -gx MISE_DISABLE_TOOLS_HINTS 1
 
-# Fcixt5-lotus
-# set -Ux GTK_IM_MODULE fcitx
-# set -Ux QT_IM_MODULE fcitx
-set -Ux XMODIFIERS "@im=fcitx"
-set -gx SDL_IM_MODULE fcitx
-set -gx GLFW_IM_MODULE ibus
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.cargo/bin

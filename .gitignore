@@ -1,18 +1,23 @@
+### Backup Files
 # Ignore all backup files
 *.bak
 *.bk
 
-# Ignore all Fish plugins
-fish_variables
-nvm*
-_nvm*
-fisher*
-*.theme
-fish/.config/fish/functions/tide
-*_prompt.fish
-_tide*
-fzf*.fish
-_fzf*.fish
+### Fish
+fish/.config/fish/conf.d/*.fish
+!fish/.config/fish/conf.d/[0-9][0-9]-*.fish
 
-# Ignore tmux plugins
-tmux/.config/tmux/plugins
+fish/fish_variables
+fish/.config/fish/functions/tide/
+
+fish/**/nvm*
+fish/**/_nvm*
+fish/**/fisher*
+fish/**/*.theme
+fish/**/*_prompt.fish
+fish/**/_tide*
+fish/**/fzf*.fish
+fish/**/_fzf*.fish
+
+### Tmux
+tmux/**/plugins/
