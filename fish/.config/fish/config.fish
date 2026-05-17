@@ -5,6 +5,9 @@
 # Disable default greeting
 set -g fish_greeting
 
+# Load theme
+fish_config theme choose catppuccin-mocha
+
 # ----------------------------------------
 # Local machine overrides
 # ----------------------------------------
