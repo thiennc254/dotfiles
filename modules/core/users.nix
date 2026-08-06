@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  programs.fish.enable = true;
+
   users.users.azty = {
     isNormalUser = true;
     extraGroups = [
@@ -9,7 +11,6 @@
       "adbusers"
     ];
 
-    programs.fish.enable = true;
     shell = pkgs.fish;
   };
 }
