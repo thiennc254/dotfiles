@@ -1,29 +1,24 @@
-{config, ...}: {
+{pkgs, ...}: {
   home.sessionVariables = {
     TERMINAL = "xdg-terminal-exec";
     EDITOR = "nvim";
-    DOT_DIR = "/home/azty/dotfiles";
+    VISUAL = "nvim";
+    DOT_DIR = "$HOME/dotfiles";
 
+    # Wayland native flags
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
     QT_QPA_PLATFORM = "wayland;xcb";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
-    GDK_BACKEND = "wayland";
+    GDK_BACKEND = "wayland,x11,*";
 
-    XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_DESKTOP = "Hyprland";
-
+    # Java & GUI fix
     _JAVA_AWT_WM_NONREPARENTING = "1";
 
-    SDL_IM_MODULE = "fcitx";
-    GLFW_IM_MODULE = "fcitx";
+    # Input Method (Fcitx5)
     XMODIFIERS = "@im=fcitx";
-    FCITX_ADDON_DIRS = "/run/current-system/sw/lib/fcitx5";
-  };
-
-  xdg.configFile."uwsm/env" = {
-    source = "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
+    QT_IM_MODULE = "fcitx";
+    GTK_IM_MODULE = "fcitx";
   };
 }
