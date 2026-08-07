@@ -1,0 +1,37 @@
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    # Lua
+    lua-language-server
+    stylua
+
+    # Web (HTML, TS, CSS, Tailwind, Prettier)
+    vscode-langservers-extracted
+    typescript-language-server
+    tailwindcss-language-server
+    prettierd
+
+    # Nix
+    nil
+    alejandra
+    statix
+    deadnix
+
+    # Python
+    pyright
+    black
+
+    # Shell
+    bash-language-server
+    shfmt
+
+    # C/C++ & Rust & Go
+    clang-tools
+    rust-analyzer
+    gopls
+    gofumpt
+
+    # Markdown
+    marksman
+    markdownlint-cli2
+  ];
+}
