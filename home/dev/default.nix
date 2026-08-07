@@ -3,5 +3,6 @@ _: {
     ./git.nix
     ./nvim.nix
     ./tools.nix
+    ./lsp.nix
   ];
 }

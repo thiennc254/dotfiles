@@ -8,17 +8,17 @@
     vscode-langservers-extracted
     typescript-language-server
     tailwindcss-language-server
-    prettierd
+    biome
 
     # Nix
-    nil
+    nixd
     alejandra
     statix
     deadnix
 
     # Python
     pyright
-    black
+    ruff
 
     # Shell
     bash-language-server
