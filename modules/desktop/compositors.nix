@@ -8,9 +8,10 @@
     enable = true;
     waylandCompositors = {
       niri = {
-        prettyName = "Niri (UWSM)";
+        prettyName = "Niri";
         comment = "Niri Scrollable Tiling Compositor managed by UWSM";
-        binPath = "${pkgs.niri}/bin/niri";
+        binPath = "/run/current-system/sw/bin/niri";
+        extraArgs = ["--session"];
       };
     };
   };
@@ -22,9 +23,8 @@
       pkgs.xdg-desktop-portal-gtk
     ];
     config = {
-      common = {
+      niri = {
         default = ["gnome" "gtk"];
-        "org.freedesktop.impl.portal.Secret" = ["gnome"];
       };
     };
   };
