@@ -15,6 +15,13 @@ _: {
       pull = {
         rebase = true;
       };
+
+      safe = {
+        directory = [
+          "/home/azty/dotfiles"
+          "*"
+        ];
+      };
     };
   };
 
