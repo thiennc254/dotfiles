@@ -1,0 +1,11 @@
+- Download usbutils:
+sudo pacman -S usbutils
+- Check Vendor Id:
+lsusb
+- Add rule:
+sudo nano /etc/udev/rules.d/50-via.rules
+- Add this line and change idVendor:
+KERNEL=="hidraw*", ATTRS{idVendor}=="36b0", MODE="0666"
+- Reload rules:
+sudo udevadm control --reload-rules
+sudo udevadm trigger

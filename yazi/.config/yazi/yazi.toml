@@ -1,0 +1,10 @@
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true },
+]
+play = [
+    { run = 'mpv "$@"', orphan = true, for = "unix" },
+]
+display = [
+    { run = 'imv "$@"', orphan = true, for = "unix" },
+]

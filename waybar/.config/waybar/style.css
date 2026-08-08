@@ -1,0 +1,155 @@
+@import "./themes/catppuccin-mocha.css";
+
+* {
+    font-family: "CaskaydiaCove Nerd Font Mono";
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 24px;
+}
+
+/* GENERAL */
+.modules-left,
+.modules-right {
+    background-color: alpha(@background, 0.85);
+    border-radius: 14px;
+    font-size: 13.5px;
+    color: @foreground;
+    border: 2px solid alpha(@color7, 0.5);
+}
+
+.modules-left {
+    margin-left: 10px;
+}
+
+.modules-center {
+    font-size: 13.5px;
+}
+
+.modules-right {
+    margin-right: 10px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+tooltip {
+    border-radius: 14px;
+    background: alpha(@background, 0.85);
+}
+
+/* LEFT MODULES */
+#custom-menu {
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color4;
+}
+
+#window {
+    margin-right: 8px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+/* CENTER MODULES */
+#custom-update {
+    margin-right: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color2;
+}
+
+#workspaces {
+    background-color: alpha(@background, 0.85);
+    border-radius: 14px;
+    padding: 0 10px;
+    border: 2px solid alpha(@color7, 0.5);
+}
+
+#workspaces button {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+    color: alpha(@color4, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active,
+#workspaces button.active.empty {
+    color: @color3;
+}
+
+#workspaces button.empty {
+    color: alpha(@foreground, 0.5);
+}
+
+#workspaces button.urgen {
+    color: @color17;
+}
+
+#workspaces button:hover {
+    color: @color1;
+    background: transparent;
+}
+
+#custom-voxtype,
+#custom-screenrecording-indicator {
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color1;
+}
+
+/* RIGHT MODULES */
+#tray,
+#wireplumber.text,
+#bluetooth.text,
+#network.text,
+#battery.text {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#custom-expand-icon {
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 20px;
+    color: @color3;
+}
+
+#wireplumber.icon {
+    padding: 0 5px;
+    font-size: 19px;
+    color: @color1;
+}
+
+#bluetooth.icon {
+    padding: 0 5px;
+    font-size: 17px;
+    color: @color4;
+}
+
+#network.icon {
+    padding: 0 5px;
+    font-size: 21px;
+    color: @color5;
+}
+
+#battery.icon {
+    padding: 0 5px;
+    font-size: 13.5px;
+    color: @color2;
+}
+
+#clock.icon {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#clock.text {
+    margin: 0 8px 0 5px;
+    font-weight: bold;
+}

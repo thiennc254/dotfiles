@@ -1,0 +1,161 @@
+palette = "catppuccin_mocha"
+
+# --- LAYOUT & CORES ---
+format="""$os$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$time$line_break$character"""
+
+[fill]
+symbol = ' '
+
+[character]
+success_symbol = '[](fg:thm_blue)'
+error_symbol = '[](bold fg:thm_red)'
+vimcmd_symbol = '[](bold fg:thm_green)'
+vimcmd_replace_symbol = '[](bold fg:thm_green)'
+vimcmd_replace_one_symbol = '[](bold fg:thm_purple)'
+vimcmd_visual_symbol = '[](bold fg:thm_yellow)'
+
+[cmd_duration]
+min_time = 500
+format = ' [takes $duration](bold fg:thm_yellow)'
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = '󰍛 '
+style = 'fg:thm_overlay'
+
+[battery]
+disabled = false
+format = " [$symbol$percentage]($style)"
+full_symbol = "󱊢 "
+discharging_symbol = "󱊢 "
+charging_symbol = "󰂄 "
+unknown_symbol = "󰁽 "
+empty_symbol = "󰂎 "
+
+[[battery.display]]
+threshold = 100
+style = "fg:thm_orange"
+
+# --- USERNAME & HOSTNAME ---
+[username]
+show_always = true
+style_user = "fg:thm_red"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:thm_blue"
+format = "@[$hostname]($style)"
+disabled = false
+aliases = { "arch" = "arch" }
+
+# --- ENVIRONMENT & TOOLS ---
+[directory]
+style = "fg:thm_cyan"
+format = " [$path]($style)"
+truncate_to_repo = false
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "󰘬 "
+style = "fg:thm_green"
+format = " [$symbol$branch]($style)"
+
+[git_status]
+style = "fg:thm_yellow"
+format = '( [\[$all_status$ahead_behind\]]($style))'
+
+[golang]
+symbol = " "
+style = "fg:thm_cyan"
+format = " [$symbol$version]($style)"
+
+[nodejs]
+symbol = " "
+style = "fg:thm_green"
+format = " [$symbol$version]($style)"
+
+[python]
+symbol = " "
+style = "fg:thm_cyan"
+format = " [$symbol$version]($style)"
+
+[c]
+symbol = " "
+style = "fg:thm_purple"
+format = " [$symbol$version]($style)"
+
+[cpp]
+symbol = " "
+style = "fg:thm_purple"
+format = " [$symbol$version]($style)"
+
+[docker_context]
+symbol = " "
+style = "fg:thm_blue"
+format = " [$symbol$context]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:thm_fg"
+format = " [$time]($style)"
+
+[line_break]
+disabled = false
+
+# --- DISABLED MODULES ---
+[os]
+disabled = true
+[rust]
+disabled = true
+[scala]
+disabled = true
+[elixir]
+disabled = true
+[elm]
+disabled = true
+[gradle]
+disabled = true
+[haskell]
+disabled = true
+[java]
+disabled = true
+[julia]
+disabled = true
+[nim]
+disabled = true
+
+# --- PALETTE 1: CATPPUCCIN MOCHA ---
+[palettes.catppuccin_mocha]
+thm_bg = "#1e1e2e"
+thm_fg = "#cdd6f4"
+thm_base = "#11111b"
+thm_surface = "#313244"
+thm_overlay = "#585b70"
+thm_red = "#f38ba8"
+thm_orange = "#fab387"
+thm_yellow = "#f9e2af"
+thm_green = "#a6e3a1"
+thm_blue = "#89b4fa"
+thm_purple = "#cba6f7"
+thm_cyan = "#89dceb"
+thm_magenta = "#f5c2e7"
+
+# --- PALETTE 2: TOKYONIGHT NIGHT ---
+[palettes.tokyonight_night]
+thm_bg = "#1a1b26"
+thm_fg = "#c0caf5"
+thm_base = "#16161e"
+thm_surface = "#2f3549"
+thm_overlay = "#444b6a"
+thm_red = "#f7768e"
+thm_orange = "#ff9e64"
+thm_yellow = "#e0af68"
+thm_green = "#9ece6a"
+thm_blue = "#7aa2f7"
+thm_purple = "#bb9af7"
+thm_cyan = "#7dcfff"
+thm_magenta = "#bb9af7"

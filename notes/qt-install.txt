@@ -1,0 +1,22 @@
+---------- QT ----------
+# Donwload
+mirror list: http://mirrors.ustc.edu.cn/qtproject/
+
+step1: Install Qt Online Installer [https://www.qt.io/development/download]
+step2: chmod +x [Qt Online Installer]
+step3: ./[File name] --mirror [mirrors]
+
+# Icons
+nvim ~/.local/share/applications/qtcreator.desktop
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Qt Creator (Local)
+GenericName=C++/Qt IDE
+Comment=Integrated Development Environment for Qt
+Exec=/home/<user>/Qt/Tools/QtCreator/bin/qtcreator %F
+Icon=qtcreator
+Terminal=false
+Categories=Development;IDE;Qt;
+StartupWMClass=qtcreator

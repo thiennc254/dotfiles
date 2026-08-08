@@ -1,0 +1,24 @@
+### Backup Files
+# Ignore all backup files
+*.bak
+*.bk
+
+### Fish
+fish/.config/fish/conf.d/*.fish
+!fish/.config/fish/conf.d/[0-9][0-9]-*.fish
+
+fish/**/fish_variables
+fish/.config/fish/functions/tide/
+
+fish/**/nvm*
+fish/**/_nvm*
+fish/**/fisher*
+fish/**/themes/
+fish/**/*.theme
+fish/**/*_prompt.fish
+fish/**/_tide*
+fish/**/fzf*.fish
+fish/**/_fzf*.fish
+
+### Tmux
+tmux/**/plugins/
