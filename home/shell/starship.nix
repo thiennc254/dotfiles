@@ -29,9 +29,9 @@ _: {
       };
 
       username = {
-        show_always = false;
+        show_always = true;
         style_user = "fg:red";
-        format = "[$user]($style)";
+        format = " [$user]($style)";
       };
 
       hostname = {
@@ -51,7 +51,7 @@ _: {
       git_branch = {
         symbol = "󰘬 ";
         style = "fg:magenta";
-        format = " [$symbol$branch]($style)";
+        format = " [$symbol$branch]($style) ";
       };
 
       git_status = {
