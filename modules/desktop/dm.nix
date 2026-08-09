@@ -19,7 +19,7 @@
       };
       appearance = {
         wallpaper = {
-          path = "/home/azty/Pictures/wallpaper/bg.png";
+          path = "/var/lib/noctalia-greeter/bg.png";
           fill_mode = "crop";
         };
       };
