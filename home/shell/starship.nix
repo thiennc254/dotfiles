@@ -1,8 +1,10 @@
 _: {
   programs.starship = {
     enable = true;
+    enableFishIntegration = true;
+
     settings = {
-      palette = "catppuccin_mocha";
+      palette = "tokyonight_night";
       format = "$os$username$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$line_break$character";
       # format = "$os$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$time$line_break$character";
 
