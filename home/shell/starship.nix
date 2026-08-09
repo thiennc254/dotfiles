@@ -3,7 +3,8 @@ _: {
     enable = true;
     settings = {
       palette = "catppuccin_mocha";
-      format = "$os$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$time$line_break$character";
+      format = "$os$username$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$line_break$character";
+      # format = "$os$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$time$line_break$character";
 
       fill = {
         symbol = " ";

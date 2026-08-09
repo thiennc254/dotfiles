@@ -17,9 +17,9 @@
       user = {
         default = "azty";
       };
-      appeareance = {
+      appearance = {
         wallpaper = {
-          path = "~/Pictures/wallpaper/bg.png";
+          path = "/home/azty/Pictures/wallpaper/bg.png";
           fill_mode = "crop";
         };
       };
