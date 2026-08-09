@@ -4,13 +4,11 @@ _: {
     enableFishIntegration = true;
 
     settings = {
-      palette = "tokyonight_night";
-      format = "$os$username$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$line_break$character";
-      # format = "$os$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$docker_context$cmd_duration$time$line_break$character";
+      palette = "catppuccin_mocha";
 
-      fill = {
-        symbol = " ";
-      };
+      format = ''
+        [╭](bold fg:overlay)$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$docker_context$cmd_duration$time
+        [╰](bold fg:overlay)$character'';
 
       character = {
         success_symbol = "[](fg:blue)";
@@ -21,67 +19,53 @@ _: {
         vimcmd_visual_symbol = "[](bold fg:yellow)";
       };
 
-      cmd_duration = {
-        min_time = 500;
-        format = " [takes $duration](bold fg:yellow)";
-      };
-
-      memory_usage = {
+      os = {
         disabled = false;
-        threshold = -1;
-        symbol = "󰍛 ";
-        style = "fg:overlay";
-      };
-
-      battery = {
-        disabled = false;
-        format = " [$symbol$percentage]($style)";
-        full_symbol = "󱊢 ";
-        discharging_symbol = "󱊢 ";
-        charging_symbol = "󰂄 ";
-        unknown_symbol = "󰁽 ";
-        empty_symbol = "󰂎 ";
-        display = [
-          {
-            threshold = 100;
-            style = "fg:orange";
-          }
-        ];
+        symbols = {
+          Arch = " ";
+        };
+        style = "bold fg:blue";
+        format = " [$symbol]($style)";
       };
 
       username = {
-        show_always = true;
+        show_always = false;
         style_user = "fg:red";
         format = "[$user]($style)";
       };
 
       hostname = {
-        ssh_only = false;
+        ssh_only = true;
         style = "fg:blue";
         format = "@[$hostname]($style)";
-        disabled = false;
-        aliases = {
-          "arch" = "arch";
-        };
       };
 
       directory = {
-        style = "fg:cyan";
+        style = "bold fg:cyan";
         format = " [$path]($style)";
-        truncate_to_repo = false;
+        truncate_to_repo = true;
         truncation_length = 3;
         truncation_symbol = "…/";
       };
 
       git_branch = {
         symbol = "󰘬 ";
-        style = "fg:green";
+        style = "fg:magenta";
         format = " [$symbol$branch]($style)";
       };
 
       git_status = {
-        style = "fg:yellow";
-        format = "( [\\[$all_status$ahead_behind\\]]($style))";
+        style = "fg:red";
+        format = "([\\[$all_status$ahead_behind\\]]($style))";
+      };
+
+      nix_shell = {
+        disabled = false;
+        symbol = " ";
+        style = "bold fg:blue";
+        format = " [$symbol$state]($style)";
+        impure_msg = "impure";
+        pure_msg = "pure";
       };
 
       golang = {
@@ -96,8 +80,14 @@ _: {
       };
       python = {
         symbol = " ";
-        style = "fg:cyan";
+        style = "fg:yellow";
         format = " [$symbol$version]($style)";
+      };
+      rust = {
+        symbol = " ";
+        style = "fg:orange";
+        format = " [$symbol$version]($style)";
+        disabled = false;
       };
       c = {
         symbol = " ";
@@ -115,49 +105,19 @@ _: {
         format = " [$symbol$context]($style)";
       };
 
+      cmd_duration = {
+        min_time = 2000;
+        format = " [⏱ $duration](bold fg:yellow)";
+      };
+
       time = {
-        disabled = false;
+        disabled = true;
         time_format = "%R";
-        style = "fg:fg";
+        style = "fg:overlay";
         format = " [$time]($style)";
       };
 
-      line_break = {
-        disabled = false;
-      };
-
-      # Modules disabled
-      os = {
-        disabled = true;
-      };
-      rust = {
-        disabled = true;
-      };
-      scala = {
-        disabled = true;
-      };
-      elixir = {
-        disabled = true;
-      };
-      elm = {
-        disabled = true;
-      };
-      gradle = {
-        disabled = true;
-      };
-      haskell = {
-        disabled = true;
-      };
-      java = {
-        disabled = true;
-      };
-      julia = {
-        disabled = true;
-      };
-      nim = {
-        disabled = true;
-      };
-
+      # Palettes
       palettes.catppuccin_mocha = {
         bg = "#1e1e2e";
         fg = "#cdd6f4";
@@ -172,22 +132,6 @@ _: {
         purple = "#cba6f7";
         cyan = "#89dceb";
         magenta = "#f5c2e7";
-      };
-
-      palettes.tokyonight_night = {
-        bg = "#1a1b26";
-        fg = "#c0caf5";
-        base = "#16161e";
-        surface = "#2f3549";
-        overlay = "#444b6a";
-        red = "#f7768e";
-        orange = "#ff9e64";
-        yellow = "#e0af68";
-        green = "#9ece6a";
-        blue = "#7aa2f7";
-        purple = "#bb9af7";
-        cyan = "#7dcfff";
-        magenta = "#bb9af7";
       };
     };
   };

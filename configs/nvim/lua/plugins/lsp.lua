@@ -7,8 +7,8 @@ return {
     opts = {
       servers = {
         lua_ls = {},
-        nil_ls = {},
         pyright = {},
+        ruff = {},
         ts_ls = {},
         tailwindcss = {},
         bashls = {},
@@ -19,6 +19,15 @@ return {
         html = {},
         cssls = {},
         marksman = {},
+        nixd = {
+          settings = {
+            nixd = {
+              formatting = {
+                command = { "alejandra" },
+              },
+            },
+          },
+        },
       },
     },
   },
