@@ -30,7 +30,7 @@ _: {
 
       username = {
         show_always = true;
-        style_user = "fg:red";
+        style_user = "bold fg:red";
         format = "[$user]($style)";
       };
 
@@ -50,7 +50,7 @@ _: {
 
       git_branch = {
         symbol = "󰘬 ";
-        style = "fg:magenta";
+        style = "fg:green";
         format = " [$symbol$branch]($style) ";
       };
 
@@ -113,7 +113,7 @@ _: {
 
       cmd_duration = {
         min_time = 2000;
-        format = " [⏱ $duration](bold fg:yellow)";
+        format = " [⏱ $duration](bold fg:magenta)";
       };
 
       time = {
