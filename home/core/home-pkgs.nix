@@ -22,5 +22,7 @@
     kdePackages.kdegraphics-thumbnailers
     mpv
     imv
+
+    google-chrome
   ];
 }
