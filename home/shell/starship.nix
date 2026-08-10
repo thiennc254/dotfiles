@@ -7,16 +7,16 @@ _: {
       palette = "catppuccin_mocha";
 
       format = ''
-        [╭](bold fg:overlay)$username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$docker_context$cmd_duration$time
-        [╰](bold fg:overlay)$character'';
+         $username$hostname$directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$docker_context$cmd_duration$time
+        $character'';
 
       character = {
-        success_symbol = "[](fg:blue)";
-        error_symbol = "[](bold fg:red)";
-        vimcmd_symbol = "[](bold fg:green)";
-        vimcmd_replace_symbol = "[](bold fg:green)";
-        vimcmd_replace_one_symbol = "[](bold fg:purple)";
-        vimcmd_visual_symbol = "[](bold fg:yellow)";
+        success_symbol = " [➜](fg:blue)";
+        error_symbol = " [➜](bold fg:red)";
+        vimcmd_symbol = " [➜](bold fg:green)";
+        vimcmd_replace_symbol = " [](bold fg:green)";
+        vimcmd_replace_one_symbol = " [](bold fg:purple)";
+        vimcmd_visual_symbol = " [](bold fg:yellow)";
       };
 
       os = {
@@ -25,13 +25,13 @@ _: {
           Arch = " ";
         };
         style = "bold fg:blue";
-        format = " [$symbol]($style)";
+        format = "[$symbol]($style)";
       };
 
       username = {
         show_always = true;
         style_user = "fg:red";
-        format = " [$user]($style)";
+        format = "[$user]($style)";
       };
 
       hostname = {
@@ -55,7 +55,7 @@ _: {
       };
 
       git_status = {
-        style = "fg:red";
+        style = "fg:yellow";
         format = "([\\[$all_status$ahead_behind\\]]($style))";
       };
 
@@ -73,32 +73,38 @@ _: {
         style = "fg:cyan";
         format = " [$symbol$version]($style)";
       };
+
       nodejs = {
         symbol = " ";
         style = "fg:green";
         format = " [$symbol$version]($style)";
       };
+
       python = {
         symbol = " ";
         style = "fg:yellow";
         format = " [$symbol$version]($style)";
       };
+
       rust = {
         symbol = " ";
         style = "fg:orange";
         format = " [$symbol$version]($style)";
         disabled = false;
       };
+
       c = {
         symbol = " ";
         style = "fg:purple";
         format = " [$symbol$version]($style)";
       };
+
       cpp = {
         symbol = " ";
         style = "fg:purple";
         format = " [$symbol$version]($style)";
       };
+
       docker_context = {
         symbol = " ";
         style = "fg:blue";
