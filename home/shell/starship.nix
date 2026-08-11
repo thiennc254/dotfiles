@@ -35,7 +35,7 @@ _: {
         disabled = false;
         show_always = true;
         style_user = "bold fg:red";
-        format = "[$user]($style)";
+        format = "[ $user]($style)";
       };
 
       hostname = {
@@ -48,7 +48,7 @@ _: {
       directory = {
         disabled = false;
         style = "bold fg:cyan";
-        format = "[$path]($style)";
+        format = "[󰉋 $path]($style)";
         truncate_to_repo = true;
         truncation_length = 3;
         truncation_symbol = "…/";
