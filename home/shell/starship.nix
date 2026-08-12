@@ -47,7 +47,7 @@ _: {
 
       directory = {
         disabled = false;
-        style = "bold fg:cyan";
+        style = "bold fg:blue";
         format = "[󰉋 $path]($style)";
         truncate_to_repo = true;
         truncation_length = 3;
