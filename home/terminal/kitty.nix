@@ -20,7 +20,7 @@ _: {
       # --- Cursor ---
       cursor_shape = "block";
       cursor_beam_thickness = "1.5";
-      # shell_integration = "no-cursor";
+      shell_integration = "no-cursor";
 
       # --- Windows ---
       window_padding_width = 8;
