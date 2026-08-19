@@ -34,7 +34,7 @@ _: {
       allow_remote_control = "yes";
 
       # --- Aesthetics ---
-      background_opacity = "1";
+      background_opacity = 0.7;
       enable_background_blur = "yes";
       dynamic_background_opacity = "yes";
       enable_audio_bell = "no";
@@ -48,7 +48,7 @@ _: {
 
       # --- Cursor Trail ---
       cursor_trail = 1;
-      cursor_trail_decay = "0.1 0.2";
+      cursor_trail_decay = "0.1 0.3";
       cursor_trail_start_threshold = 1;
 
       # --- Tab bar ---

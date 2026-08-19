@@ -28,7 +28,6 @@ _: {
       enable = true;
       shellInit = ''
         set -g fish_greeting
-        set -Ux IS_NIX_MACHINE true
         set -gx EDITOR nvim
         set -gx VISUAL nvim
         set -gx SUDO_EDITOR nvim
@@ -44,7 +43,7 @@ _: {
         lsa = "eza -lah --group-directories-first --icons=auto";
         lt = "eza --tree --level=2 --long --icons --git";
         lta = "lt -a";
-        ns = "sudo nixos-rebuild switch --flake $DOT_DIR#$(hostname)";
+        ns = "sudo nixos-rebuild switch --flake $DOT_DIR#$(hostname) --max-jobs 2 --cores 2";
       };
 
       shellAbbrs = {
