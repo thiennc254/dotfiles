@@ -11,6 +11,9 @@
     trash-cli
     eza
     yazi
+    wiremix
+    impala
+    bluetui
 
     wl-clipboard
     xdg-terminal-exec
