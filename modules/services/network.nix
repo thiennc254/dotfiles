@@ -5,7 +5,14 @@ _: {
     firewall = {
       enable = true;
       allowPing = true;
+      allowedUDPPorts = [7 9];
       # allowTCPPorts = [ 22 80 443 ];
+    };
+
+    interfaces = {
+      wlp0s20f3 = {
+        wakeOnLan.enable = true;
+      };
     };
   };
 
