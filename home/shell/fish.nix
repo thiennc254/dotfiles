@@ -5,10 +5,14 @@ _: {
   ];
 
   programs = {
-    zoxide.enable = true;
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
 
     fzf = {
       enable = true;
+      enableFishIntegration = true;
       defaultCommand = "fd --type f --strip-cwd-prefix --hidden --exclude .git";
       defaultOptions = [
         "--height 65%"
@@ -41,7 +45,7 @@ _: {
         v = "nvim";
         ls = "eza -lh --group-directories-first --icons=auto";
         lsa = "eza -lah --group-directories-first --icons=auto";
-        lt = "eza --tree --level=2 --long --icons --git";
+        lt = "eza --tree --long --icons --git";
         lta = "lt -a";
         ns = "sudo nixos-rebuild switch --flake $DOT_DIR#$(hostname) --max-jobs 2 --cores 2";
       };
@@ -58,7 +62,7 @@ _: {
         gpl = "git pull --rebase";
         gco = "git checkout";
         gcb = "git checkout -b";
-        tws = "tmux a -t $(whoami) || tmux new -s $(whoami)";
+        tws = "tmux new -A -s (whoami)";
       };
 
       interactiveShellInit = ''
@@ -69,6 +73,12 @@ _: {
         # if not set -q TMUX; and not set -q NO_TMUX; and status is-interactive
         #     tmux attach -t (whoami) 2>/dev/null; or tmux new -s (whoami)
         # end
+
+        function __open_editor_here
+            $EDITOR .
+            commandline -f repaint
+        end
+        bind \eo __open_editor_here
 
         # Catppuccin Mocha Palette
         set -g fish_color_normal cdd6f4
