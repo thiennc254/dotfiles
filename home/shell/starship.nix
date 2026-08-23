@@ -7,8 +7,8 @@ _: {
       palette = "catppuccin_mocha";
 
       format = ''
-        [╭─❮ ](bold fg:overlay)$os$username$hostname $directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$aws$terraform$docker_context
-        [╰─](bold fg:overlay)$character
+        [╭─❮ ](bold fg:fg)$os$username$hostname $directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$aws$terraform$docker_context
+        [╰─](bold fg:fg)$character
       '';
 
       character = {
