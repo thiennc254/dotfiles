@@ -26,6 +26,6 @@
     mpv
     imv
 
-    google-chrome
+    brave
   ];
 }
