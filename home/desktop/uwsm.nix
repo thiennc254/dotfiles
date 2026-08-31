@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+_: {
   home.sessionVariables = {
     TERMINAL = "xdg-terminal-exec";
     EDITOR = "nvim";

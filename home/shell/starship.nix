@@ -7,13 +7,13 @@ _: {
       palette = "catppuccin_mocha";
 
       format = ''
-        [╭─❮ ](bold fg:fg)$os$username$hostname $directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$aws$terraform$docker_context
-        [╰─](bold fg:fg)$character
+        [╭─❮ ](bold fg:subtext0)$os$username$hostname $directory$git_branch$git_status$c$cpp$golang$nodejs$python$rust$nix_shell$aws$terraform$docker_context
+        [╰─](bold fg:subtext0)$character
       '';
 
       character = {
         # "➜" "❯❮" "►"
-        success_symbol = "[►](fg:overlay)";
+        success_symbol = "[►](fg:subtext0)";
         error_symbol = "[►](bold fg:red)";
         vimcmd_symbol = "[►](bold fg:green)";
         vimcmd_replace_symbol = "[](bold fg:green)";
@@ -76,7 +76,7 @@ _: {
       git_commit = {
         disabled = true;
         commit_hash_length = 7;
-        style = "fg:overlay";
+        style = "fg:subtext0";
       };
 
       nix_shell = {
@@ -171,16 +171,19 @@ _: {
       time = {
         disabled = true;
         time_format = "%R";
-        style = "fg:overlay";
+        style = "fg:surface2";
         format = " [$time]($style)";
       };
 
       palettes.catppuccin_mocha = {
         bg = "#1e1e2e";
         fg = "#cdd6f4";
+        subtext0 = "#7f849c";
+        subtext1 = "#9399b2";
+        subtext2 = "#6c7086";
         base = "#11111b";
         surface = "#313244";
-        overlay = "#585b70";
+        surface2 = "#585b70";
         red = "#f38ba8";
         orange = "#fab387";
         yellow = "#f9e2af";
