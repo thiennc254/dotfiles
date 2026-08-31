@@ -4,25 +4,30 @@ in {
   programs.niri.settings.binds = {
     # --- System & Launchers ---
     "${mod}+Shift+Slash".action.show-hotkey-overlay = {};
+
     "${mod}+Return" = {
-      hotkey-overlay-title = "Open a Terminal: alacritty";
+      hotkey-overlay.title = "Open a Terminal: alacritty";
       action.spawn = ["kitty"];
     };
+
     "${mod}+B" = {
-      hotkey-overlay-title = "Open a Browser";
+      hotkey-overlay.title = "Open a Browser";
       action.spawn = ["brave"];
     };
+
     "Super+Alt+L" = {
-      hotkey-overlay-title = "Lock the Screen: swaylock";
+      hotkey-overlay.title = "Lock the Screen: swaylock";
       action.spawn = ["swaylock"];
     };
+
     "Super+Alt+S" = {
       allow-when-locked = true;
-      hotkey-overlay-title = null;
+      hotkey-overlay.hidden = true; # Đổi từ hotkey-overlay-title = null;
       action.spawn-sh = ["pkill orca || exec orca"];
     };
+
     "${mod}+D" = {
-      hotkey-overlay-title = "Open Launcher";
+      hotkey-overlay.title = "Open Launcher";
       action.spawn-sh = ["noctalia msg panel-toggle launcher"];
     };
 

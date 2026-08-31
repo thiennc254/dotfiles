@@ -1,5 +1,11 @@
-{config, ...}: {
+{
+  config,
+  inputs,
+  ...
+}: {
   imports = [
+    inputs.niri.homeModules.niri
+
     ./core
     ./desktop
     ./dev

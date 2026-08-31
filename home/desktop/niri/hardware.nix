@@ -12,9 +12,12 @@ _: {
 
     outputs = {
       "HDMI-A-1" = {
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 60.0;
+        };
         scale = 1.0;
-        transform = "normal";
-        mode = "1920x1080@60.000";
         position = {
           x = 0;
           y = 0;
@@ -23,9 +26,12 @@ _: {
       };
 
       "eDP-1" = {
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 60.02;
+        };
         scale = 1.5;
-        transform = "normal";
-        mode = "1920x1080@60.000";
         position = {
           x = 1920;
           y = 0;

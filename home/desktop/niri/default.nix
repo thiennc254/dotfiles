@@ -2,10 +2,6 @@
   programs.niri = {
     enable = true;
     package = pkgs.niri;
-
-    settings = {
-      include = ["noctalia.kdl"];
-    };
   };
 
   imports = [

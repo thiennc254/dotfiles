@@ -20,11 +20,11 @@ _: {
       };
 
       border = {
-        on = true;
+        enable = true; # Thay vì 'on = true;'
         width = 4;
-        "active-color" = "#ffc87f";
-        "inactive-color" = "#505050";
-        "urgent-color" = "#9b0000";
+        active.color = "#ffc87f"; # Chuyển từ "active-color"
+        inactive.color = "#505050"; # Chuyển từ "inactive-color"
+        urgent.color = "#9b0000"; # Chuyển từ "urgent-color"
       };
 
       shadow = {
@@ -38,24 +38,6 @@ _: {
       };
 
       struts = {};
-    };
-
-    animations = {
-      slowdown = 1.0;
-      workspace-switch = {
-        spring = {
-          damping-ratio = 1.0;
-          stiffness = 1000;
-          mass = 1.0;
-        };
-      };
-      window-open = {
-        spring = {
-          damping-ratio = 0.8;
-          stiffness = 800;
-          mass = 1.0;
-        };
-      };
     };
   };
 }
