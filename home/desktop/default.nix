@@ -4,5 +4,6 @@ _: {
     ./cursor.nix
     ./uwsm.nix
     ./wayland-shell.nix
+    ./niri
   ];
 }
