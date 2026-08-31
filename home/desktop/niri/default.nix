@@ -1,20 +1,17 @@
-_: {
-  imports = [
-    ./binds.nix
-    ./layout.nix
-    ./outputs.nix
-    ./rules.nix
-  ];
+{pkgs, ...}: {
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
 
-  programs.niri.settings = {
-    input = {
-      keyboard = {};
-
-      touchpad = {
-        tap = true;
-        natural-scroll = true;
-        dwt = true;
-      };
+    settings = {
+      include = ["noctalia.kdl"];
     };
   };
+
+  imports = [
+    ./hardware.nix
+    ./layout.nix
+    ./rules.nix
+    ./binds.nix
+  ];
 }
