@@ -10,6 +10,8 @@ _: {
       extraConfig = ''
         [GENERAL]
         Enabled = true
+        AutoResetBDPROCHOT = true
+        Disable_Sysfs_Power_Limits = true
 
         [BATTERY]
         Update_Rate_S = 30
@@ -20,9 +22,9 @@ _: {
 
         [AC]
         Update_Rate_S = 5
-        PL1_Tdp_W = 25
-        PL2_Tdp_W = 35
-        Trip_Temp_C = 90
+        PL1_Tdp_W = 30
+        PL2_Tdp_W = 40
+        Trip_Temp_C = 92
         cTDP = 0
       '';
     };
@@ -34,9 +36,9 @@ _: {
         CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
         PLATFORM_PROFILE_ON_AC = "performance";
 
-        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-        PLATFORM_PROFILE_ON_BAT = "low-power";
+        CPU_SCALING_GOVERNOR_ON_BAT = "performance";
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_performance";
+        PLATFORM_PROFILE_ON_BAT = "balanced";
 
         STOP_CHARGE_THRESH_BAT0 = "1";
 
