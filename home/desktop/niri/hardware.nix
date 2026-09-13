@@ -19,8 +19,8 @@ _: {
         };
         scale = 1.0;
         position = {
-          x = 0;
-          y = 0;
+          x = 1280;
+          y = 180;
         };
         focus-at-startup = true;
       };
@@ -31,9 +31,12 @@ _: {
           height = 1080;
           refresh = 60.02;
         };
-        scale = 1.5;
+        # transform = {
+        #   rotation = 0;
+        # };
+        scale = 1.25;
         position = {
-          x = 1920;
+          x = 0;
           y = 0;
         };
       };

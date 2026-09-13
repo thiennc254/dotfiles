@@ -66,11 +66,11 @@ in {
     };
     "XF86MonBrightnessUp" = {
       allow-when-locked = true;
-      action.spawn = ["brightnessctl" "--class=backlight" "set" "+10%"];
+      action.spawn = ["sh" "-c" "brightnessctl --class=backlight set +5% & ddcutil setvcp 10 + 5 2>/dev/null"];
     };
     "XF86MonBrightnessDown" = {
       allow-when-locked = true;
-      action.spawn = ["brightnessctl" "--class=backlight" "set" "10%-"];
+      action.spawn = ["sh" "-c" "brightnessctl --class=backlight set 5%- & ddcutil setvcp 10 - 5 2>/dev/null"];
     };
 
     # --- Windows Management ---

@@ -4,7 +4,7 @@ _: {
     screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
 
     layout = {
-      gaps = 12.5;
+      gaps = 10;
       center-focused-column = "never";
 
       preset-column-widths = [
@@ -20,14 +20,15 @@ _: {
       };
 
       border = {
-        enable = true; # Thay vì 'on = true;'
+        enable = true;
         width = 4;
-        active.color = "#ffc87f"; # Chuyển từ "active-color"
-        inactive.color = "#505050"; # Chuyển từ "inactive-color"
-        urgent.color = "#9b0000"; # Chuyển từ "urgent-color"
+        active.color = "#1e1e2e";
+        inactive.color = "#1e1e2eb3";
+        urgent.color = "#f38ba8";
       };
 
       shadow = {
+        enable = false;
         softness = 30;
         spread = 5;
         offset = {
