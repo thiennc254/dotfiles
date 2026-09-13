@@ -11,6 +11,8 @@
     smartmontools
     intel-gpu-tools
     ddcutil
+    via
+    qmk
 
     # Network Diagnostics
     curl
@@ -33,6 +35,8 @@
     upower
     linuxPackages.cpupower
     brightnessctl
+    throttled
+    stress-ng
 
     # System Integration Daemons / Auth
     bluez
