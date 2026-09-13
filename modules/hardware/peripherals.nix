@@ -1,7 +1,14 @@
-_: {
+{pkgs, ...}: {
   hardware.i2c.enable = true;
+  hardware.keyboard.qmk.enable = true;
+
+  services.udev.packages = with pkgs; [
+    via
+    vial
+  ];
 
   services.udev.extraRules = ''
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="800a", MODE="0666", TAG+="uaccess"
+    KERNEL=="hidraw*", ATTRS{idVendor}=="36b0", ATTRS{idProduct}=="3025", MODE="0666", GROUP="users"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="36b0", ATTRS{idProduct}=="3025", MODE="0666", GROUP="users"
   '';
 }
