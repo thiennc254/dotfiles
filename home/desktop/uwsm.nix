@@ -19,6 +19,6 @@ _: {
     # Input Method (Fcitx5)
     XMODIFIERS = "@im=fcitx";
     QT_IM_MODULE = "fcitx";
-    GTK_IM_MODULE = "fcitx";
+    # GTK_IM_MODULE = "fcitx";
   };
 }

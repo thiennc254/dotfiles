@@ -6,6 +6,10 @@ _: {
         default-column-width = {};
       }
       {
+        matches = [{app-id = "^org\.fcitx\.fcitx5";}];
+        open-floating = true;
+      }
+      {
         matches = [
           {
             app-id = "firefox$";
