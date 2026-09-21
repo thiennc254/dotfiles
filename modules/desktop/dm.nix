@@ -1,49 +1,20 @@
 {
-  pkgs,
   inputs,
+  pkgs,
   ...
 }: {
   imports = [
     inputs.noctalia-greeter.nixosModules.default
   ];
 
-  programs.noctalia-greeter = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
     settings = {
-      session = {
-        default = "Niri (UWSM)";
-        rememberSession = true;
-      };
-      user = {
-        default = "azty";
-      };
-      appearance = {
-        wallpaper = {
-          path = "/var/lib/noctalia-greeter/bg.png";
-          fill_mode = "crop";
-        };
+      cursor = {
+        theme = "Bibata-Modern-Ice";
+        size = 24;
+        path = "${pkgs.bibata-cursors}/share/icons";
       };
     };
   };
-
-  systemd.services.greetd.serviceConfig = {
-    Type = "idle";
-    StandardInput = "tty";
-    StandardOutput = "tty";
-    StandardError = "journal";
-    TTYReset = true;
-    TTYVHangup = true;
-    TTYVTDisallocate = true;
-  };
-
-  #TUI-GREETER
-  # services.greetd = {
-  #   enable = false;
-  #   settings = {
-  #     default_session = {
-  #       command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd 'uwsm start niri.desktop'";
-  #       user = "greeter";
-  #     };
-  #   };
-  # };
 }
