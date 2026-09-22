@@ -12,7 +12,7 @@ in {
 
     "${mod}+B" = {
       hotkey-overlay.title = "Open a Browser";
-      action.spawn = ["brave"];
+      action.spawn = ["firefox"];
     };
 
     "Super+Alt+L" = {
