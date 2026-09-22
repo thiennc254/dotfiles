@@ -8,9 +8,9 @@
     jq
     tree
     fastfetch
-    trash-cli
     eza
     yazi
+    trashy
     wiremix
     impala
     bluetui
