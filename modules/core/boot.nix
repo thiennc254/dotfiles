@@ -18,6 +18,7 @@
       "splash"
       "ideapad_laptop.allow_v4_dytc=Y"
       "ucsi_acpi.disable_ucsi_lock=1"
+      "usbcore.autosuspend=-1"
     ];
 
     kernelModules = ["i2c-dev"];
