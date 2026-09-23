@@ -15,6 +15,9 @@
     impala
     bluetui
     tldr
+    wireplumber
+    pamixer
+    playerctl
 
     wl-clipboard
     xdg-terminal-exec
