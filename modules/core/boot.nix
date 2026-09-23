@@ -21,6 +21,9 @@
       "usbcore.autosuspend=-1"
     ];
 
-    kernelModules = ["i2c-dev"];
+    kernelModules = [
+      "i2c-dev"
+      "uinput"
+    ];
   };
 }

@@ -9,6 +9,7 @@
       "audio"
       "video"
       "adbusers"
+      "input"
     ];
 
     shell = pkgs.fish;
