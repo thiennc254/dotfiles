@@ -14,6 +14,7 @@ _: {
 
       settings = {
         "media.av1.enabled" = false;
+        "ui.key.menuAccessKeyFocuses" = false;
       };
     };
   };
