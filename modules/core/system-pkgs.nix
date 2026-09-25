@@ -10,6 +10,7 @@
     lm_sensors
     smartmontools
     intel-gpu-tools
+    libva-utils
     ddcutil
     via
     qmk
