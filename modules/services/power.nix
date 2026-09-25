@@ -22,8 +22,8 @@ _: {
 
         [AC]
         Update_Rate_S = 5
-        PL1_Tdp_W = 30
-        PL2_Tdp_W = 40
+        PL1_Tdp_W = 25
+        PL2_Tdp_W = 30
         Trip_Temp_C = 92
         cTDP = 0
       '';
