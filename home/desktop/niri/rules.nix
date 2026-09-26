@@ -2,11 +2,7 @@ _: {
   programs.niri.settings = {
     window-rules = [
       {
-        matches = [{app-id = "^org\\.wezfurlong\\.wezterm$";}];
-        default-column-width = {};
-      }
-      {
-        matches = [{app-id = "^org\.fcitx\.fcitx5";}];
+        matches = [{app-id = "^org\\.fcitx\\.fcitx5";}];
         open-floating = true;
       }
       {
@@ -20,8 +16,8 @@ _: {
             title = "^Picture-in-Picture$";
           }
           {
-            app-id = "firefox$";
-            title = "^Extension: \\(Bitwarden Password Manager\\)";
+            app-id = "firefox";
+            title = "moz-extension://.*";
           }
         ];
         open-floating = true;
