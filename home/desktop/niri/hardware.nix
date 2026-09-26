@@ -10,6 +10,12 @@ _: {
       };
     };
 
+    gestures = {
+      hot-corners = {
+        enable = false;
+      };
+    };
+
     outputs = {
       "HDMI-A-1" = {
         mode = {
@@ -31,9 +37,6 @@ _: {
           height = 1080;
           refresh = 60.02;
         };
-        # transform = {
-        #   rotation = 0;
-        # };
         scale = 1.0;
         position = {
           x = 0;
