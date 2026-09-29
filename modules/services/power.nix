@@ -40,7 +40,8 @@ _: {
         CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_performance";
         PLATFORM_PROFILE_ON_BAT = "balanced";
 
-        STOP_CHARGE_THRESH_BAT0 = "1";
+        START_CHARGE_THRESH_BAT1 = 0;
+        STOP_CHARGE_THRESH_BAT1 = 1;
 
         DEVICES_TO_DISABLE_ON_STARTUP = "";
         DEVICES_TO_ENABLE_ON_STARTUP = "bluetooth";

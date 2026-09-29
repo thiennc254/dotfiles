@@ -31,7 +31,7 @@ _: {
       confirm-close-surface = false;
 
       # --- Transparent / Blur ---
-      background-opacity = 0.7;
+      background-opacity = 0.65;
       background-blur = true;
       background-opacity-cells = true;
 
