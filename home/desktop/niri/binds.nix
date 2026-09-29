@@ -1,36 +1,52 @@
 _: let
   mod = "Mod";
+  uwsm = args: ["uwsm" "app" "--"] ++ args;
+  noctalia = cmd: ["noctalia msg ${cmd}"];
 in {
   programs.niri.settings.binds = {
     # --- System & Launchers ---
     "${mod}+Shift+Slash".action.show-hotkey-overlay = {};
-
     "${mod}+Return" = {
-      hotkey-overlay.title = "Open a Terminal: alacritty";
-      action.spawn = ["kitty"];
+      hotkey-overlay.title = "Open a Terminal: Ghostty";
+      action.spawn = uwsm ["ghostty"];
     };
-
-    "${mod}+B" = {
-      hotkey-overlay.title = "Open a Browser";
-      action.spawn = ["firefox"];
-    };
-
-    "Super+Alt+L" = {
-      hotkey-overlay.title = "Lock the Screen: swaylock";
-      action.spawn = ["swaylock"];
-    };
-
-    "Super+Alt+S" = {
-      allow-when-locked = true;
-      hotkey-overlay.hidden = true; # Đổi từ hotkey-overlay-title = null;
-      action.spawn-sh = ["pkill orca || exec orca"];
-    };
-
     "${mod}+D" = {
       hotkey-overlay.title = "Open Launcher";
-      action.spawn-sh = ["noctalia msg panel-toggle launcher"];
+      action.spawn-sh = noctalia "panel-toggle launcher";
+    };
+    "${mod}+S" = {
+      hotkey-overlay.title = "Open Control Center";
+      action.spawn-sh = noctalia "panel-toggle control-center";
+    };
+    "${mod}+Period" = {
+      hotkey-overlay.title = "Open Settings";
+      action.spawn-sh = noctalia "settings-toggle";
+    };
+    "${mod}+A" = {
+      hotkey-overlay.title = "Open Audio Settings";
+      action.spawn-sh = noctalia "panel-toggle control-center audio";
+    };
+    "${mod}+W" = {
+      hotkey-overlay.title = "Open Wifi Settings";
+      action.spawn-sh = noctalia "panel-toggle control-center network";
+    };
+    "${mod}+B" = {
+      hotkey-overlay.title = "Open Bluetooth Settings";
+      action.spawn-sh = noctalia "panel-toggle control-center bluetooth";
+    };
+    "${mod}+V" = {
+      hotkey-overlay.title = "Open Clipboard Menu";
+      action.spawn-sh = noctalia "panel-toggle clipboard";
     };
 
+    "${mod}+Shift+B" = {
+      hotkey-overlay.title = "Open a browser";
+      action.spawn = uwsm ["firefox"];
+    };
+    "${mod}+Shift+E" = {
+      hotkey-overlay.title = "File Management";
+      action.spawn = uwsm ["dolphin"];
+    };
     # --- Media & Brightness ---
     "XF86AudioRaiseVolume" = {
       allow-when-locked = true;
@@ -66,15 +82,16 @@ in {
     };
     "XF86MonBrightnessUp" = {
       allow-when-locked = true;
-      action.spawn = ["sh" "-c" "brightnessctl --class=backlight set +5% & ddcutil setvcp 10 + 5 2>/dev/null"];
+      action.spawn = ["brightnessctl" "--class=backlight" "set" "+5%"];
     };
+
     "XF86MonBrightnessDown" = {
       allow-when-locked = true;
-      action.spawn = ["sh" "-c" "brightnessctl --class=backlight set 5%- & ddcutil setvcp 10 - 5 2>/dev/null"];
+      action.spawn = ["brightnessctl" "--class=backlight" "set" "5%-"];
     };
 
     # --- Windows Management ---
-    "${mod}+O" = {
+    "${mod}+Shift+A" = {
       repeat = false;
       action.toggle-overview = {};
     };
@@ -194,8 +211,6 @@ in {
     # Layout Operations (Consume/Expel, Resize, Floating)
     "${mod}+BracketLeft".action.consume-or-expel-window-left = {};
     "${mod}+BracketRight".action.consume-or-expel-window-right = {};
-    "${mod}+Comma".action.consume-window-into-column = {};
-    "${mod}+Period".action.expel-window-from-column = {};
     "${mod}+R".action.switch-preset-column-width = {};
     "${mod}+Shift+R".action.switch-preset-column-width-back = {};
     "${mod}+Ctrl+Shift+R".action.switch-preset-window-height = {};
@@ -210,9 +225,8 @@ in {
     "${mod}+Equal".action.set-column-width = "+5%";
     "${mod}+Shift+Minus".action.set-window-height = "-5%";
     "${mod}+Shift+Equal".action.set-window-height = "+5%";
-    "${mod}+V".action.toggle-window-floating = {};
+    "${mod}+O".action.toggle-window-floating = {};
     "${mod}+Shift+V".action.switch-focus-between-floating-and-tiling = {};
-    "${mod}+W".action.toggle-column-tabbed-display = {};
 
     # Screenshots & Power
     "Print".action.screenshot = {};
@@ -222,7 +236,6 @@ in {
       allow-inhibiting = false;
       action.toggle-keyboard-shortcuts-inhibit = {};
     };
-    "${mod}+Shift+E".action.quit = {};
     "Ctrl+Alt+Delete".action.quit = {};
     "${mod}+Shift+P".action.power-off-monitors = {};
   };
