@@ -32,7 +32,7 @@ _: {
 
       # --- Transparent / Blur ---
       background-opacity = 0.65;
-      background-blur = true;
+      background-blur = false;
       background-opacity-cells = true;
 
       # --- Terminal UX ---
