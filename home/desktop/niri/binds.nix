@@ -8,7 +8,7 @@ in {
     "${mod}+Shift+Slash".action.show-hotkey-overlay = {};
     "${mod}+Return" = {
       hotkey-overlay.title = "Open a Terminal: Ghostty";
-      action.spawn = uwsm ["ghostty"];
+      action.spawn = uwsm ["kitty"];
     };
     "${mod}+D" = {
       hotkey-overlay.title = "Open Launcher";
