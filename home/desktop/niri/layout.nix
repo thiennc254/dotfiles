@@ -22,9 +22,9 @@ _: {
 
       border = {
         enable = true;
-        width = 4;
-        active.color = "#1e1e2e";
-        inactive.color = "#1e1e2eb3";
+        width = 5;
+        active.color = "#73daca80";
+        inactive.color = "#1e1e2ebf";
         urgent.color = "#f38ba8";
       };
 

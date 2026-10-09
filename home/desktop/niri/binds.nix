@@ -1,14 +1,13 @@
 _: let
   mod = "Mod";
-  uwsm = args: ["uwsm" "app" "--"] ++ args;
   noctalia = cmd: ["noctalia msg ${cmd}"];
 in {
   programs.niri.settings.binds = {
     # --- System & Launchers ---
     "${mod}+Shift+Slash".action.show-hotkey-overlay = {};
     "${mod}+Return" = {
-      hotkey-overlay.title = "Open a Terminal: Ghostty";
-      action.spawn = uwsm ["kitty"];
+      hotkey-overlay.title = "Open a Terminal: Kitty";
+      action.spawn = ["kitty"];
     };
     "${mod}+D" = {
       hotkey-overlay.title = "Open Launcher";
@@ -41,11 +40,11 @@ in {
 
     "${mod}+Shift+B" = {
       hotkey-overlay.title = "Open a browser";
-      action.spawn = uwsm ["firefox"];
+      action.spawn = ["firefox"];
     };
     "${mod}+Shift+E" = {
       hotkey-overlay.title = "File Management";
-      action.spawn = uwsm ["dolphin"];
+      action.spawn = ["dolphin"];
     };
     # --- Media & Brightness ---
     "XF86AudioRaiseVolume" = {
