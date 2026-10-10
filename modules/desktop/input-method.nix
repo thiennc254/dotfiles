@@ -7,6 +7,8 @@
     group = "input";
   };
 
+  services.udev.extraRules = ''KERNEL=="uinput", GROUP="input", MODE="0660" '';
+
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";

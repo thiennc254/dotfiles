@@ -4,7 +4,7 @@ _: {
     screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
 
     layout = {
-      gaps = 10;
+      gaps = 8;
       center-focused-column = "never";
 
       preset-column-widths = [
